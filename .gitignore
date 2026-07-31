@@ -1,15 +1,29 @@
-# Python
+# ---------------- Backend ----------------
 backend/venv/
-__pycache__/
-*.pyc
-.env
+backend/__pycache__/
+backend/.env
 
-# React
+# Ignore uploaded/generated files
+backend/uploads/*
+backend/storage/*
+
+# Keep folders
+!backend/uploads/.gitkeep
+!backend/storage/.gitkeep
+
+# ---------------- Frontend ----------------
 frontend/node_modules/
 frontend/dist/
+frontend/.env
 
-# VS Code
+# ---------------- Python ----------------
+*.pyc
+*.pyo
+
+# ---------------- VS Code ----------------
 .vscode/
+.idea/
 
-# Logs
-*.log
+# ---------------- Windows ----------------
+Thumbs.db
+.DS_Store

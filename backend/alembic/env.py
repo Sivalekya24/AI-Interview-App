@@ -1,19 +1,23 @@
 from logging.config import fileConfig
-
+from app.models.proctoring_event import ProctoringEvent
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
-
+from app.models.interview_answer import InterviewAnswer
 from alembic import context
-
-from backend.app.core.config import settings
-from backend.app.core.database import Base
-
-# Import ALL models here
+from app.models.interview_question import InterviewQuestion
+from app.core.config import settings
+from app.core.database import Base
+from app.models.voice_recording import VoiceRecording
+# Import all models here
 from app.models.user import User
-
+from app.models.resume import Resume
+from app.models.interview import Interview
 config = context.config
 
-config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
+config.set_main_option(
+    "sqlalchemy.url",
+    settings.DATABASE_URL
+)
 
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
@@ -22,7 +26,9 @@ target_metadata = Base.metadata
 
 
 def run_migrations_offline():
+
     url = config.get_main_option("sqlalchemy.url")
+
     context.configure(
         url=url,
         target_metadata=target_metadata,
@@ -35,6 +41,7 @@ def run_migrations_offline():
 
 
 def run_migrations_online():
+
     connectable = engine_from_config(
         config.get_section(config.config_ini_section),
         prefix="sqlalchemy.",
@@ -42,6 +49,7 @@ def run_migrations_online():
     )
 
     with connectable.connect() as connection:
+
         context.configure(
             connection=connection,
             target_metadata=target_metadata,
