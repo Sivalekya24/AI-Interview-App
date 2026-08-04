@@ -1,6 +1,6 @@
 absl-py==2.5.0
 accelerate==1.14.0
-aiosmtplib==5.1.2
+aiosmtplib==2.0.2
 alembic==1.18.5
 annotated-doc==0.0.4
 annotated-types==0.7.0
