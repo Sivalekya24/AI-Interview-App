@@ -170,7 +170,7 @@ tabulate==0.10.0
 tenacity==9.1.4
 thinc==8.3.13
 threadpoolctl==3.6.0
-tokenizers==0.22.2
+
 torch==2.8.0
 torchvision==0.23.0
 tqdm==4.68.4
