@@ -59,7 +59,7 @@ export default function LiveProctoring() {
 
     return (
 
-        <div className="space-y-8">
+        <div className="live-proctoring-page space-y-8">
 
             {/* Header */}
 
@@ -67,18 +67,18 @@ export default function LiveProctoring() {
 
                 <div>
 
-                    <h1 className="font-display text-4xl text-[#111827] flex items-center gap-3">
+                   <h1 className="live-proctoring-heading font-display text-4xl flex items-center gap-3">
 
                         <Radio
                             size={28}
-                            className="text-[#0E4B8E]"
+                           className="live-proctoring-primary"
                         />
 
                         Live Proctoring
 
                     </h1>
 
-                    <p className="text-gray-500 mt-3">
+                    <p className="live-proctoring-text text-gray-500 mt-3">
 
                         Monitor all interviews currently in progress.
 
@@ -86,15 +86,15 @@ export default function LiveProctoring() {
 
                 </div>
 
-                <div className="rounded-2xl bg-[#EEF4FF] px-6 py-4">
+                <div className="live-proctoring-box rounded-2xl px-6 py-4">
 
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm live-proctoring-text">
 
                         Active Interviews
 
                     </p>
 
-                    <h2 className="font-display text-3xl">
+                    <h2 className="font-display text-3xl live-proctoring-heading mt-1">
 
                         {interviews.length}
 
@@ -108,7 +108,7 @@ export default function LiveProctoring() {
 
             {loading && (
 
-                <Card className="rounded-3xl border-0 shadow-lg p-12 text-center">
+               <Card className="live-proctoring-card rounded-3xl border-0 shadow-lg p-12 text-center">
 
                     Loading live interviews...
 
@@ -121,22 +121,22 @@ export default function LiveProctoring() {
             {!loading &&
                 interviews.length === 0 && (
 
-                <Card className="rounded-3xl border-0 shadow-lg p-14">
+                <Card className="live-proctoring-card rounded-3xl border-0 shadow-lg p-14">
 
                     <div className="flex flex-col items-center">
 
                         <Radio
                             size={60}
-                            className="text-gray-300"
+                            className="live-proctoring-muted"
                         />
 
-                        <h2 className="font-display text-3xl mt-6">
+                        <h2 className="live-proctoring-heading font-display text-3xl mt-6">
 
                             No Live Interviews
 
                         </h2>
 
-                        <p className="text-gray-500 mt-3">
+                        <p className="live-proctoring-text  mt-3">
 
                             There are currently no interviews running.
 

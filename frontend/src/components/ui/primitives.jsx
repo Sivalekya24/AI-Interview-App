@@ -5,7 +5,7 @@ export function Card({
 }) {
   return (
     <div
-      className={`bg-white border border-gray-200 rounded-3xl shadow-sm ${className}`}
+      className={`card border rounded-3xl shadow-sm ${className}`}
       {...props}
     >
       {children}
@@ -62,7 +62,7 @@ export function Input({
 
       {label && (
 
-        <span className="block text-sm font-medium text-gray-700 mb-2">
+        <span className="input-label block text-sm font-medium mb-2">
 
           {label}
 
@@ -72,22 +72,18 @@ export function Input({
 
       <input
         className={`
-          w-full
-          h-14
-          rounded-2xl
-          bg-[#EEF3FF]
-          border
-          border-[#D7E3FF]
-          px-5
-          text-gray-900
-          placeholder:text-gray-400
-          outline-none
-          transition
-          focus:border-[#5C7AEA]
-          focus:ring-4
-          focus:ring-[#5C7AEA]/20
-          ${className}
-        `}
+  input-field
+  w-full
+  h-14
+  rounded-2xl
+  px-5
+  outline-none
+  transition
+  focus:border-[#5C7AEA]
+  focus:ring-4
+  focus:ring-[#5C7AEA]/20
+  ${className}
+`}
         {...props}
       />
 

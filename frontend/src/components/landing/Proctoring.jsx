@@ -11,23 +11,23 @@ export default function Proctoring() {
   return (
     <section
       id="proctoring"
-      className="py-24 bg-[#F8FAFC]"
+      className="proctoring-section py-24 bg-[#F8FAFC]"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
 
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* LEFT */}
 
           <div>
 
-            <span className="text-[#F4A321] uppercase tracking-[0.25em] font-semibold">
+            <span className="text-[#C97A00] uppercase tracking-[0.25em] font-semibold">
 
               LIVE PROCTORING
 
             </span>
 
-            <h2 className="font-display text-5xl mt-4 text-gray-900">
+            <h2 className="proctoring-heading font-display text-3xl md:text-4xl lg:text-5xl mt-4 text-gray-900">
 
               AI Powered
               <br />
@@ -36,7 +36,7 @@ export default function Proctoring() {
 
             </h2>
 
-            <p className="mt-8 text-lg leading-8 text-gray-600">
+            <p className="proctoring-text mt-8 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
 
               Ensure every interview is secure with
               intelligent AI monitoring.
@@ -56,13 +56,13 @@ export default function Proctoring() {
 
                 <div>
 
-                  <h3 className="font-semibold text-xl">
+                  <h3 className="proctoring-heading font-semibold text-xl">
 
                     Face Detection
 
                   </h3>
 
-                  <p className="text-gray-600">
+                  <p className="proctoring-text text-gray-600">
 
                     Detects no face and multiple faces.
 
@@ -81,13 +81,13 @@ export default function Proctoring() {
 
                 <div>
 
-                  <h3 className="font-semibold text-xl">
+                  <h3 className="proctoring-heading font-semibold text-xl">
 
                     Mobile Detection
 
                   </h3>
 
-                  <p className="text-gray-600">
+                  <p className="proctoring-text text-gray-600">
 
                     Detects mobile phone usage during interviews.
 
@@ -106,13 +106,13 @@ export default function Proctoring() {
 
                 <div>
 
-                  <h3 className="font-semibold text-xl">
+                  <h3 className="proctoring-heading font-semibold text-xl">
 
                     Browser Monitoring
 
                   </h3>
 
-                  <p className="text-gray-600">
+                  <p className="proctoring-text text-gray-600">
 
                     Detects tab switching,
                     fullscreen exit and browser blur.
@@ -131,19 +131,19 @@ export default function Proctoring() {
 
           <div className="relative">
 
-            <div className="rounded-3xl border border-gray-200 bg-white shadow-lg p-8">
+            <div className="proctoring-card rounded-3xl border border-gray-200 bg-white shadow-lg p-6 md:p-8">
 
               <div className="flex justify-between items-center">
 
                 <div>
 
-                  <h3 className="font-display text-2xl">
+                  <h3 className="proctoring-heading font-display text-2xl">
 
                     Live Session
 
                   </h3>
 
-                  <p className="text-gray-500">
+                  <p className="proctoring-text text-gray-500">
 
                     Candidate Monitoring
 
@@ -161,7 +161,7 @@ export default function Proctoring() {
 
               </div>
 
-              <div className="mt-8 rounded-2xl bg-gray-100 h-72 flex items-center justify-center">
+              <div className="mt-8 rounded-2xl bg-gray-100 h-52 sm:h-64 lg:h-72 flex items-center justify-center">
 
                 <UserRound
                   size={90}
@@ -170,7 +170,7 @@ export default function Proctoring() {
 
               </div>
 
-              <div className="grid grid-cols-2 gap-5 mt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
 
                 <div className="rounded-xl bg-green-50 p-5">
 
@@ -178,7 +178,7 @@ export default function Proctoring() {
                     className="text-green-600"
                   />
 
-                  <h4 className="mt-3 font-semibold">
+                  <h4 className="status-card-title mt-3 font-semibold">
 
                     Face Verified
 
@@ -192,7 +192,7 @@ export default function Proctoring() {
                     className="text-red-600"
                   />
 
-                  <h4 className="mt-3 font-semibold">
+                  <h4 className="status-card-title mt-3 font-semibold">
 
                     Mobile Detected
 
@@ -206,7 +206,7 @@ export default function Proctoring() {
                     className="text-yellow-600"
                   />
 
-                  <h4 className="mt-3 font-semibold">
+                  <h4 className="status-card-title mt-3 font-semibold">
 
                     Tab Switch
 
@@ -220,7 +220,7 @@ export default function Proctoring() {
                     className="text-[#0E4B8E]"
                   />
 
-                  <h4 className="mt-3 font-semibold">
+                  <h4 className="status-card-title mt-3 font-semibold">
 
                     AI Monitoring
 

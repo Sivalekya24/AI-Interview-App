@@ -52,20 +52,20 @@ export default function Features() {
 
         <section
             id="features"
-            className="py-24 bg-[#F8FAFC]"
+            className="features-section py-24 bg-[#F8FAFC]"
         >
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-10">
+           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
 
                 <div className="text-center">
 
-                    <span className="text-[#F4A321] font-semibold uppercase tracking-widest">
+                    <span className="text-[#C97A00] font-semibold uppercase tracking-widest">
 
                         FEATURES
 
                     </span>
 
-                    <h2 className="font-display text-5xl mt-5 text-gray-900">
+                    <h2 className="feature-heading font-display text-3xl md:text-4xl lg:text-5xl mt-5 text-gray-900">
 
                         Everything You Need
                         <br />
@@ -73,7 +73,7 @@ export default function Features() {
 
                     </h2>
 
-                    <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-600">
+                    <p className="feature-text mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
 
                         From resume screening to AI interviews,
                         live monitoring and recruiter analytics,
@@ -83,7 +83,7 @@ export default function Features() {
 
                 </div>
 
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 md:mt-16">
 
                     {features.map((feature) => {
 
@@ -93,7 +93,7 @@ export default function Features() {
 
                             <div
                                 key={feature.title}
-                                className="group bg-white rounded-3xl border border-gray-200 p-8 hover:border-[#0E4B8E] hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+                                className="feature-card group bg-white rounded-3xl border border-gray-200 p-6 md:p-8 hover:border-[#0E4B8E] hover:-translate-y-2 hover:shadow-xl transition-transform transition-shadow transition-colors duration-300"
                             >
 
                                 <div className="w-16 h-16 rounded-2xl bg-[#FFF8EE] flex items-center justify-center">
@@ -105,13 +105,13 @@ export default function Features() {
 
                                 </div>
 
-                                <h3 className="font-display text-2xl mt-6 text-gray-900">
+                                <h3 className="feature-heading font-display text-xl md:text-2xl mt-6 text-gray-900">
 
                                     {feature.title}
 
                                 </h3>
 
-                                <p className="mt-4 text-gray-600 leading-7">
+                                <p className="feature-text mt-4 text-gray-600 leading-7">
 
                                     {feature.description}
 

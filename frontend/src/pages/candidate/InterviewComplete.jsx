@@ -19,11 +19,11 @@ export default function InterviewComplete() {
     <PageTransition>
       <div className="min-h-screen bg-[#EEF3FA] px-8 py-8">
 
-        <div className="max-w-6xl mx-auto space-y-8">
+        <div className="interview-complete-page max-w-6xl mx-auto space-y-8">
 
           {/* ================= HERO ================= */}
 
-          <div className="rounded-[32px] bg-gradient-to-r from-[#0E4B8E] via-[#1659A5] to-[#2C6CC2] shadow-xl px-10 py-10 text-white relative overflow-hidden">
+          <div className="interview-complete-hero rounded-[32px] shadow-xl px-10 py-10 text-white relative overflow-hidden">
 
             <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/10 blur-3xl"></div>
 
@@ -63,14 +63,13 @@ export default function InterviewComplete() {
 
           <div className="grid md:grid-cols-3 gap-6">
 
-            <Card className="rounded-[28px] border-0 shadow-lg p-8 text-center">
-
+            <Card className="interview-complete-card rounded-[28px] border-0 shadow-lg p-8 text-center">
               <ClipboardCheck
                 size={34}
-                className="mx-auto text-[#0E4B8E]"
+                className="mx-auto interview-complete-primary"
               />
 
-              <p className="text-gray-500 mt-5">
+              <p className="interview-complete-text mt-5">
 
                 Interview Status
 
@@ -88,10 +87,10 @@ export default function InterviewComplete() {
 
               <Clock3
                 size={34}
-                className="mx-auto text-[#0E4B8E]"
+                className="mx-auto interview-complete-primary"
               />
 
-              <p className="text-gray-500 mt-5">
+              <p className="interview-complete-text mt-5">
 
                 Questions Answered
 
@@ -109,10 +108,10 @@ export default function InterviewComplete() {
 
               <Briefcase
                 size={34}
-                className="mx-auto text-[#0E4B8E]"
+                className="mx-auto interview-complete-primary"
               />
 
-              <p className="text-gray-500 mt-5">
+              <p className="interview-complete-text mt-5">
 
                 Interview Type
 
@@ -130,8 +129,7 @@ export default function InterviewComplete() {
 
           {/* ================= NEXT STEPS ================= */}
 
-          <Card className="rounded-[28px] border-0 shadow-lg p-8">
-
+          <Card className="interview-complete-card rounded-[28px] border-0 shadow-lg p-8">
             <h2 className="font-display text-3xl">
 
               What Happens Next?
@@ -174,7 +172,7 @@ export default function InterviewComplete() {
                       className={`w-12 h-12 rounded-full flex items-center justify-center ${
                         item.status === "Completed"
                           ? "bg-green-100"
-                          : "bg-[#EEF4FF]"
+                          : "interview-complete-blue-bg"
                       }`}
                     >
 
@@ -183,7 +181,7 @@ export default function InterviewComplete() {
                         className={
                           item.status === "Completed"
                             ? "text-green-600"
-                            : "text-[#0E4B8E]"
+                            : "interview-complete-primary"
                         }
                       />
 
@@ -205,7 +203,7 @@ export default function InterviewComplete() {
                     className={`font-medium ${
                       item.status === "Completed"
                         ? "text-green-600"
-                        : "text-[#0E4B8E]"
+                        : "interview-complete-primary"
                     }`}
                   >
 
@@ -223,15 +221,15 @@ export default function InterviewComplete() {
 
           {/* ================= PRIVACY ================= */}
 
-          <Card className="rounded-[28px] border-0 shadow-lg p-8">
+          <Card className="interview-complete-card rounded-[28px] border-0 shadow-lg p-8">
 
             <div className="flex items-start gap-5">
 
-              <div className="w-16 h-16 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+              <div className="w-16 h-16 rounded-2xl bg-interview-complete-blue-bg flex items-center justify-center">
 
                 <ShieldCheck
                   size={30}
-                  className="text-[#0E4B8E]"
+                  className="text-interview-complete-primary"
                 />
 
               </div>
@@ -244,7 +242,7 @@ export default function InterviewComplete() {
 
                 </h2>
 
-                <p className="mt-5 text-gray-600 leading-8">
+                <p className="mt-5 interview-complete-text leading-8">
 
                   Your resume, interview recording, transcript,
                   AI analysis and proctoring information have been
@@ -252,7 +250,7 @@ export default function InterviewComplete() {
 
                 </p>
 
-                <p className="mt-4 text-gray-600 leading-8">
+                <p className="mt-4 interview-complete-text leading-8">
 
                   Interview scores, recruiter comments and AI evaluation
                   are available only to authorised recruiters and are
@@ -272,7 +270,7 @@ export default function InterviewComplete() {
 
             <Button
               onClick={() => navigate("/candidate/dashboard")}
-              className="h-14 px-10 rounded-2xl bg-[#0E4B8E] hover:bg-[#0B417C] text-lg flex items-center gap-3"
+             className="interview-complete-button h-14 px-10 rounded-2xl text-lg flex items-center gap-3"
             >
 
               Back to Dashboard

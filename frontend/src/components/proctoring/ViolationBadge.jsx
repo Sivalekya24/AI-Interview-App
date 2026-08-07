@@ -13,7 +13,7 @@ export function violationLabel(type) {
 export default function ViolationBadge({ type, severity, className = '' }) {
   return (
     <span
-      className={`inline-flex items-center gap-1.5 text-xs font-mono text-alert bg-alert/10 border border-alert/20 px-2 py-1 rounded ${className}`}
+className={`violation-badge inline-flex items-center gap-1.5 text-xs font-mono px-2 py-1 rounded ${className}`}
     >
       {violationLabel(type)}
       {severity && <span className="opacity-60">· {severity}</span>}

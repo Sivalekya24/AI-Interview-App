@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -37,6 +36,70 @@
   --font-display: "Playfair Display", serif;
 }
 
+/* -----------------------------
+   Default Theme (Light)
+   ----------------------------- */
+
+:root {
+
+  --color-primary: #0E4B8E;
+  --color-primary-light: #1C64B8;
+  --color-accent: #F4A321;
+
+  --color-background: #FFFFFF;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F8FAFC;
+
+  --color-border: #E5E7EB;
+
+  --color-heading: #111827;
+  --color-body: #6B7280;
+  --color-muted: #9CA3AF;
+
+  /* Special UI Colors */
+
+  --color-blue-card: #EEF7FF;
+  --color-orange-card: #FFF7ED;
+  --color-green-card: #EEFDF5;
+
+  --color-blue-icon: #0E4B8E;
+  --color-orange-icon: #F4A321;
+  --color-green-icon: #16A34A;
+}
+
+/* -----------------------------
+   Dark Theme
+   ----------------------------- */
+
+.dark {
+
+  --color-primary: #3B82F6;
+  --color-primary-light: #60A5FA;
+  --color-accent: #FBBF24;
+
+  --color-background: #0F172A;
+  --color-surface: #1E293B;
+  --color-surface-secondary: #334155;
+
+  --color-border: #475569;
+
+  --color-heading: #F8FAFC;
+  --color-body: #CBD5E1;
+  --color-muted: #94A3B8;
+
+  /* Card Colors */
+
+  --color-blue-card: #1E3A5F;
+  --color-orange-card: #4A3412;
+  --color-green-card: #163A2A;
+
+  /* Icon Colors */
+
+  --color-blue-icon: #60A5FA;
+  --color-orange-icon: #FBBF24;
+  --color-green-icon: #4ADE80;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -48,10 +111,17 @@ body {
   color: var(--color-heading);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 * {
   box-sizing: border-box;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 a {
@@ -60,4 +130,1226 @@ a {
 
 button {
   font-family: inherit;
+}
+
+/* ===========================================================
+   HERO SECTION - DARK THEME
+=========================================================== */
+
+.dark .hero-section {
+  background: #0F172A !important;
+}
+
+.dark .hero-title {
+  color: #F8FAFC !important;
+}
+
+.dark .hero-description {
+  color: #CBD5E1 !important;
+}
+
+.dark .hero-card,
+.dark .hero-floating-card,
+.dark .hero-feature-card {
+  background: #1E293B !important;
+  border-color: #475569 !important;
+}
+
+/* Hero Card Titles */
+
+.dark .hero-heading {
+  color: #F8FAFC !important;
+}
+
+/* Hero Card Description */
+
+.dark .hero-text {
+  color: #CBD5E1 !important;
+}
+
+/* ===========================================================
+   FEATURES SECTION - DARK THEME
+=========================================================== */
+
+.dark .features-section {
+  background: #0F172A !important;
+}
+
+.dark .feature-card {
+  background: #1E293B !important;
+  border-color: #475569 !important;
+}
+
+.dark .feature-heading {
+  color: #F8FAFC !important;
+}
+
+.dark .feature-text {
+  color: #CBD5E1 !important;
+}
+
+/* ===========================================================
+   WORKFLOW SECTION - DARK THEME
+=========================================================== */
+
+.dark .workflow-section {
+  background: #0F172A !important;
+}
+
+.dark .workflow-card {
+  background: transparent;
+}
+
+.dark .workflow-heading {
+  color: #F8FAFC !important;
+}
+
+.dark .workflow-text {
+  color: #CBD5E1 !important;
+}
+
+.dark .workflow-line {
+  background: #475569 !important;
+}
+
+.dark .workflow-circle {
+  border-color: #0F172A !important;
+}
+/* ===========================================================
+   PROCTORING SECTION - DARK THEME
+=========================================================== */
+
+.dark .proctoring-section {
+  background: #0F172A !important;
+}
+
+.dark .proctoring-card {
+  background: #1E293B !important;
+  border-color: #475569 !important;
+}
+
+.dark .proctoring-heading {
+  color: #F8FAFC !important;
+}
+
+.dark .proctoring-text {
+  color: #CBD5E1 !important;
+}
+
+.status-card-title {
+  color: #111827;
+}
+
+.dark .status-card-title {
+  color: #111827;
+}
+/* ===========================================================
+   CONTACT
+=========================================================== */
+
+.dark .contact-section {
+  background: #0F172A !important;
+}
+
+.dark .contact-heading {
+  color: #F8FAFC !important;
+}
+
+.dark .contact-text {
+  color: #CBD5E1 !important;
+}
+
+.dark .contact-form-card {
+  background: #1E293B !important;
+  border-color: #475569 !important;
+}
+
+.dark .contact-input {
+  background: #334155 !important;
+  color: #F8FAFC !important;
+  border-color: #475569 !important;
+}
+
+.dark .contact-input::placeholder {
+  color: #94A3B8;
+}
+
+.dark .contact-input:focus {
+  border-color: #60A5FA !important;
+}
+/* ===========================================================
+   FOOTER
+=========================================================== */
+
+.footer-section {
+  background: #0E4B8E;
+}
+
+.footer-heading {
+  color: white;
+}
+
+.footer-text {
+  color: #dbeafe;
+}
+
+.footer-link {
+  color: white;
+}
+
+.dark .footer-section {
+  background: #020617 !important;
+}
+
+.dark .footer-heading {
+  color: #F8FAFC !important;
+}
+
+.dark .footer-text {
+  color: #CBD5E1 !important;
+}
+
+.dark .footer-link {
+  color: #F8FAFC !important;
+}
+/* ===========================================================
+   LOGO
+=========================================================== */
+
+.logo-heading {
+  color: var(--color-heading);
+}
+
+.logo-subtitle {
+  color: var(--color-body);
+}
+
+.dark .logo-heading {
+  color: var(--color-heading);
+}
+
+.dark .logo-subtitle {
+  color: var(--color-body);
+}
+/* ===========================================================
+   AUTH PAGES
+=========================================================== */
+
+.auth-page {
+  background: #EEF3FA;
+}
+
+.auth-card {
+  background: white;
+  border: 1px solid #E5E7EB;
+}
+
+.auth-heading {
+  color: #111827;
+}
+
+.auth-text {
+  color: #6B7280;
+}
+
+.auth-input {
+  background: white;
+  color: #111827;
+  border-color: #D1D5DB;
+}
+
+.dark .auth-page {
+  background: #0F172A;
+}
+
+.dark .auth-card {
+  background: #1E293B;
+  border-color: #475569;
+}
+
+.dark .auth-heading {
+  color: #F8FAFC;
+}
+
+.dark .auth-text {
+  color: #CBD5E1;
+}
+
+.dark .auth-input {
+  background: #334155;
+  color: white;
+  border-color: #475569;
+}
+
+.dark .auth-input::placeholder {
+  color: #94A3B8;
+}
+/* ===========================================================
+   REUSABLE COMPONENTS
+=========================================================== */
+
+.card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.input-label {
+  color: var(--color-heading);
+}
+
+.input-field {
+  background: #EEF3FF;
+  border: 1px solid #D7E3FF;
+  color: var(--color-heading);
+}
+
+.input-field::placeholder {
+  color: var(--color-muted);
+}
+
+/* Dark Mode */
+
+.dark .input-field {
+  background: #334155;
+  border-color: #475569;
+  color: #F8FAFC;
+}
+
+.dark .input-field::placeholder {
+  color: #94A3B8;
+}
+/* ===========================================================
+   CANDIDATE LAYOUT
+=========================================================== */
+
+.candidate-layout {
+  background: var(--color-background);
+}
+
+.candidate-header {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.candidate-heading {
+  color: var(--color-heading);
+}
+
+.candidate-text {
+  color: var(--color-body);
+}
+
+.candidate-button {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+}
+
+.candidate-button:hover {
+  border-color: var(--color-primary);
+  background: var(--color-surface-secondary);
+}
+/* ===========================================================
+   RECRUITER LAYOUT
+=========================================================== */
+
+.recruiter-layout {
+  background: var(--color-background);
+}
+
+.recruiter-sidebar {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.recruiter-header {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.recruiter-border {
+  border-color: var(--color-border);
+}
+
+.recruiter-user-card {
+  background: var(--color-surface-secondary);
+}
+
+.recruiter-heading {
+  color: var(--color-heading);
+}
+
+.recruiter-text {
+  color: var(--color-body);
+}
+
+.recruiter-nav-item {
+  color: var(--color-body);
+  transition: 0.3s;
+}
+
+.recruiter-nav-item:hover {
+  background: var(--color-surface-secondary);
+  color: var(--color-primary);
+}
+/* ===========================================================
+   CANDIDATE DASHBOARD
+=========================================================== */
+
+.candidate-dashboard{
+    background:var(--color-background);
+}
+
+.candidate-hero{
+    background:linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-primary-light)
+    );
+    color:white;
+}
+
+.candidate-card{
+    background:var(--color-surface);
+}
+
+.candidate-footer{
+    background:var(--color-surface);
+    border-color:var(--color-border);
+}
+/* ===========================================================
+   RECRUITER DASHBOARD
+=========================================================== */
+
+.recruiter-dashboard {
+  background: var(--color-background);
+}
+
+.recruiter-hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+}
+
+.recruiter-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+/* ================= Resume Upload ================= */
+
+.resume-upload-hero {
+  background: linear-gradient(
+    90deg,
+    #0E4B8E,
+    #1659A5,
+    #2C6CC2
+  );
+}
+
+.dark .resume-upload-hero {
+  background: linear-gradient(
+    90deg,
+    #1E3A8A,
+    #1D4ED8,
+    #2563EB
+  );
+}
+
+.resume-upload-card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.resume-upload-active {
+  border-color: var(--color-primary) !important;
+  background: var(--color-blue-card);
+}
+
+.resume-upload-heading {
+  color: var(--color-heading);
+}
+
+.resume-upload-icon-bg {
+  background: var(--color-blue-card);
+}
+
+.resume-upload-chip {
+  background: var(--color-blue-card);
+  color: var(--color-primary);
+}
+
+.resume-upload-button {
+  background: var(--color-primary);
+}
+
+.resume-upload-button:hover {
+  background: var(--color-primary-light);
+}
+
+.resume-security-box {
+  background: var(--color-blue-card);
+  border: 1px solid var(--color-border);
+}
+/* ================= Interview Instructions ================= */
+
+.interview-hero {
+  background: linear-gradient(90deg, #0E4B8E, #1659A5, #2C6CC2);
+}
+
+.dark .interview-hero {
+  background: linear-gradient(90deg, #1E3A8A, #1D4ED8, #2563EB);
+}
+
+.interview-heading {
+  color: var(--color-heading);
+}
+
+.interview-primary-text {
+  color: var(--color-primary);
+}
+
+.interview-icon-bg {
+  background: var(--color-blue-card);
+}
+
+.interview-button {
+  background: var(--color-primary);
+}
+
+.interview-button:hover {
+  background: var(--color-primary-light);
+}
+
+.interview-consent-active {
+  border: 1px solid var(--color-primary);
+  background: var(--color-blue-card);
+}
+
+.interview-security-box {
+  background: var(--color-blue-card);
+  border: 1px solid var(--color-border);
+}
+
+.interview-card-white {
+  background: var(--color-surface);
+}
+/* ================= Interview Room ================= */
+
+.interview-room-page{
+    background:var(--color-background);
+}
+
+.interview-room-hero{
+    background:linear-gradient(
+        90deg,
+        #0E4B8E,
+        #1659A5,
+        #2C6CC2
+    );
+}
+
+.dark .interview-room-hero{
+    background:linear-gradient(
+        90deg,
+        #1E3A8A,
+        #1D4ED8,
+        #2563EB
+    );
+}
+
+.interview-room-card{
+    background:var(--color-surface);
+}
+
+.interview-room-blue-bg{
+    background:var(--color-blue-card);
+}
+
+.interview-room-primary{
+    color:var(--color-primary);
+}
+
+.interview-room-button{
+    background:var(--color-primary);
+    color:white;
+    transition:all .25s ease;
+}
+.interview-room-button:hover{
+    background:var(--color-primary-light);
+}
+
+.interview-room-outline-button{
+    border:2px solid var(--color-primary);
+    color:var(--color-primary);
+    background:transparent;
+    transition:all .25s ease;
+}
+
+.interview-room-outline-button:hover{
+    background:var(--color-primary);
+    color:white;
+}
+
+.interview-room-progress{
+    background:var(--color-primary);
+}
+
+.interview-room-ai-message{
+    background:var(--color-blue-card);
+}
+
+.interview-room-user-message{
+    background:var(--color-surface-secondary);
+    border:1px solid var(--color-border);
+}
+
+.interview-room-listening{
+    background:var(--color-orange-card);
+    border:1px solid var(--color-accent);
+}
+
+.interview-room-footer{
+    background:var(--color-surface-secondary);
+    border-top:1px solid var(--color-border);
+}
+.interview-room-heading{
+    color:var(--color-text);
+}
+/* ================= Interview Complete ================= */
+.interview-complete-page{
+    background:var(--color-background);
+}
+
+.interview-complete-hero{
+    background:linear-gradient(
+        90deg,
+        #0E4B8E,
+        #1659A5,
+        #2C6CC2
+    );
+}
+
+.dark .interview-complete-hero{
+    background:linear-gradient(
+        90deg,
+        #1E3A8A,
+        #1D4ED8,
+        #2563EB
+    );
+}
+.interview-complete-card{
+    background:var(--color-surface);
+}
+
+.interview-complete-blue-bg{
+    background:var(--color-blue-card);
+}
+
+.interview-complete-primary{
+    color:var(--color-primary);
+}
+
+.interview-complete-text{
+    color:var(--color-body);
+}
+
+.interview-complete-button{
+    background:var(--color-primary);
+    color:white;
+    transition:all .25s ease;
+}
+
+.interview-complete-button:hover{
+    background:var(--color-primary-light);
+}/* ================= Interview Detail ================= */
+
+.interview-detail-page{
+    background:var(--color-background);
+}
+
+/* Hero */
+
+.interview-detail-hero{
+    background:linear-gradient(
+        90deg,
+        #0E4B8E,
+        #1659A5,
+        #2C6CC2
+    );
+}
+
+.dark .interview-detail-hero{
+    background:linear-gradient(
+        90deg,
+        #1E3A8A,
+        #1D4ED8,
+        #2563EB
+    );
+}
+
+/* Cards */
+
+.interview-detail-card{
+    background:var(--color-surface);
+    color:var(--color-text);
+}
+
+/* Blue Background */
+
+.interview-detail-blue-bg{
+    background:var(--color-blue-card);
+}
+
+/* Orange Background */
+
+.interview-detail-orange-bg{
+    background:var(--color-orange-card);
+}
+
+/* Green Background */
+
+.interview-detail-green-bg{
+    background:var(--color-green-card);
+}
+
+/* Border */
+
+.interview-detail-border{
+    border:1px solid var(--color-border);
+}
+
+/* Primary Color */
+
+.interview-detail-primary{
+    color:var(--color-primary);
+}
+
+/* Secondary Text */
+
+.interview-detail-secondary{
+    color:var(--color-text-secondary);
+}
+
+/* Surface */
+
+.interview-detail-surface{
+    background:var(--color-surface-secondary);
+}
+
+/* Primary Button */
+
+.interview-detail-button{
+    background:var(--color-primary);
+    color:#fff;
+    transition:0.25s;
+}
+
+.interview-detail-button:hover{
+    background:var(--color-primary-light);
+}
+
+/* Outline Button */
+
+.interview-detail-outline-button{
+    background:transparent;
+    border:2px solid var(--color-border);
+    color:var(--color-text);
+    transition:0.25s;
+}
+
+.interview-detail-outline-button:hover{
+    background:var(--color-surface-secondary);
+}
+
+/* Tabs */
+
+.interview-detail-tab{
+    background:var(--color-surface);
+    color:var(--color-text-secondary);
+    transition:0.25s;
+}
+
+.interview-detail-tab:hover{
+    background:var(--color-blue-card);
+}
+
+.interview-detail-tab-active{
+    background:var(--color-primary);
+    color:#fff;
+}
+
+/* Candidate Answer Box */
+
+.interview-detail-answer{
+    background:var(--color-surface-secondary);
+    border:1px solid var(--color-border);
+}
+
+/* Recommendation Box */
+
+.interview-detail-recommendation{
+    background:var(--color-blue-card);
+    border:1px solid var(--color-border);
+}
+
+/* Status Colors */
+
+.interview-detail-success{
+    color:#16A34A;
+}
+
+.interview-detail-danger{
+    color:#DC2626;
+}
+
+.interview-detail-warning{
+    color:#D97706;
+}
+
+/* Hover */
+
+.interview-detail-card:hover{
+    transition:0.3s;
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+/* Dark Mode */
+
+.dark .interview-detail-card{
+    background:var(--color-surface);
+    color:var(--color-text);
+}
+
+.dark .interview-detail-answer{
+    background:var(--color-surface-secondary);
+    border-color:var(--color-border);
+}
+
+.dark .interview-detail-recommendation{
+    background:var(--color-blue-card);
+    border-color:var(--color-border);
+}
+
+.dark .interview-detail-outline-button{
+    border-color:var(--color-border);
+    color:var(--color-text);
+}
+
+.dark .interview-detail-outline-button:hover{
+    background:var(--color-surface-secondary);
+}
+
+.dark .interview-detail-tab{
+    background:var(--color-surface);
+    color:var(--color-text-secondary);
+}
+
+.dark .interview-detail-tab:hover{
+    background:var(--color-blue-card);
+}
+
+.dark .interview-detail-tab-active{
+    background:var(--color-primary);
+    color:#fff;
+}
+/* ================= Interview List ================= */
+
+.interview-list-page{
+    background: var(--color-background);
+}
+
+.interview-list-card{
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.interview-list-heading{
+    color: var(--color-heading);
+}
+
+.interview-list-text{
+    color: var(--color-body);
+}
+
+.interview-list-secondary{
+    color: var(--color-body);
+}
+
+.interview-list-border{
+    border-bottom: 1px solid var(--color-border);
+}
+
+.interview-list-row{
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color .25s ease;
+}
+
+.interview-list-row:hover{
+    background: var(--color-surface-secondary);
+}
+
+.interview-list-primary{
+    color: var(--color-primary);
+}
+
+.interview-list-success{
+    color: var(--color-success);
+}
+
+.interview-list-warning{
+    color: var(--color-warning);
+}
+
+.interview-list-danger{
+    color: var(--color-danger);
+}
+
+.interview-list-empty{
+    color: var(--color-body);
+}
+/* ================= Live Interview ================= */
+
+.live-interview-page{
+    background: var(--color-background);
+}
+
+.live-interview-card{
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.live-interview-heading{
+    color: var(--color-heading);
+}
+
+.live-interview-text{
+    color: var(--color-body);
+}
+
+.live-interview-primary{
+    color: var(--color-primary);
+}
+
+.live-interview-border{
+    border-color: var(--color-border);
+}
+
+.live-interview-camera{
+    background: var(--color-surface-secondary);
+    border: 2px dashed var(--color-border);
+}
+
+.live-interview-progress-bg{
+    background: var(--color-border);
+}
+
+.live-interview-progress{
+    background: var(--color-primary);
+}
+
+.live-interview-button{
+    background: var(--color-primary);
+    color: white;
+}
+
+.live-interview-button:hover{
+    background: var(--color-primary-light);
+}
+
+.live-interview-danger-button{
+    background: var(--color-danger);
+    color: white;
+}
+
+.live-interview-danger-button:hover{
+    background: #dc2626;
+}
+
+.live-interview-success{
+    color: var(--color-success);
+}
+
+.live-interview-warning{
+    color: var(--color-warning);
+}
+
+.live-interview-danger{
+    color: var(--color-danger);
+}
+
+.live-interview-muted{
+    color: var(--color-body);
+}
+
+.live-interview-violation{
+    background: rgba(239,68,68,.08);
+    border: 1px solid rgba(239,68,68,.2);
+}
+
+.dark .live-interview-violation{
+    background: rgba(239,68,68,.12);
+    border-color: rgba(239,68,68,.35);
+}
+/* ================= Live Proctoring ================= */
+
+.live-proctoring-page{
+    background: var(--color-background);
+}
+
+.live-proctoring-card{
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.live-proctoring-box{
+    background: var(--color-blue-card);
+}
+
+.live-proctoring-heading{
+    color: var(--color-heading);
+}
+
+.live-proctoring-text{
+    color: var(--color-body);
+}
+
+.live-proctoring-primary{
+    color: var(--color-primary);
+}
+
+.live-proctoring-muted{
+    color: var(--color-border);
+}
+/* ================= Proctoring Tile ================= */
+
+.proctoring-tile{
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.proctoring-tile:hover{
+    border-color: var(--color-primary);
+}
+
+.proctoring-tile-heading{
+    color: var(--color-heading);
+}
+
+.proctoring-tile-text{
+    color: var(--color-body);
+}
+
+.proctoring-tile-primary{
+    color: var(--color-primary);
+}
+
+.proctoring-tile-panel{
+    background: var(--color-surface-secondary);
+    border: 1px solid var(--color-border);
+}
+
+.proctoring-tile-danger-box{
+    background: rgba(239,68,68,.08);
+    border: 1px solid rgba(239,68,68,.2);
+}
+
+.dark .proctoring-tile-danger-box{
+    background: rgba(239,68,68,.12);
+    border-color: rgba(239,68,68,.35);
+}
+
+.proctoring-tile-button{
+    background: var(--color-primary);
+    color: white;
+}
+
+.proctoring-tile-button:hover{
+    background: var(--color-primary-light);
+}
+/* ================= User Management ================= */
+
+.user-management-page{
+    background: var(--color-background);
+}
+
+.user-management-card{
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.user-management-heading{
+    color: var(--color-heading);
+}
+
+.user-management-text{
+    color: var(--color-body);
+}
+
+.user-management-border{
+    border-bottom: 1px solid var(--color-border);
+}
+.user-management-power{
+    color: var(--color-body);
+}
+
+.user-management-power:hover{
+    color: var(--color-heading);
+}
+/* ================= Violations ================= */
+
+.violations-page{
+    background: var(--color-background);
+}
+
+.violations-card{
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.violations-heading{
+    color: var(--color-heading);
+}
+
+.violations-text{
+    color: var(--color-body);
+}
+
+.violations-primary{
+    color: var(--color-primary);
+}
+
+.violations-row{
+    border-top: 1px solid var(--color-border);
+}
+
+.violations-row:hover{
+    background: var(--color-surface-secondary);
+}
+/* ================= Violation Badge ================= */
+
+.violation-badge{
+    color: var(--color-danger);
+    background: rgba(239,68,68,.08);
+    border: 1px solid rgba(239,68,68,.25);
+}
+
+.dark .violation-badge{
+    background: rgba(239,68,68,.12);
+    border-color: rgba(239,68,68,.35);
+}
+/* ================= Contact Messages ================= */
+
+.contact-messages-page{
+    background: var(--color-background);
+}
+
+.contact-messages-card{
+    background: var(--color-surface);
+}
+
+.contact-messages-heading{
+    color: var(--color-text);
+}
+
+.contact-messages-text{
+    color: var(--color-text);
+}
+
+.contact-messages-secondary{
+    color: var(--color-text-secondary);
+}
+
+.contact-messages-border{
+    border-bottom: 1px solid var(--color-border);
+}
+
+.contact-messages-row:hover{
+    background: var(--color-surface-secondary);
+}
+
+.contact-primary{
+    color: var(--color-primary);
+}
+
+.contact-status-read{
+    background: rgba(34,197,94,.15);
+    color: #16a34a;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: .75rem;
+}
+
+.contact-status-new{
+    background: rgba(245,158,11,.15);
+    color: #d97706;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: .75rem;
+}
+
+.dark .contact-status-read{
+    background: rgba(34,197,94,.2);
+}
+
+.dark .contact-status-new{
+    background: rgba(245,158,11,.2);
+}
+/* ================= Reports ================= */
+
+.reports-page{
+    background:var(--color-background);
+}
+
+.reports-card{
+    background:var(--color-surface);
+}
+
+.reports-heading{
+    color:var(--color-text);
+}
+
+.reports-secondary{
+    color:var(--color-text-secondary);
+}
+
+.reports-primary{
+    color:var(--color-primary);
+}
+
+.reports-alert{
+    color:#dc2626;
+}
+
+.dark .reports-alert{
+    color:#f87171;
+}
+/* ================= Downloads ================= */
+
+.downloads-page{
+    background: var(--color-background);
+}
+
+.downloads-card{
+    background: var(--color-surface);
+}
+
+.downloads-icon{
+    background: var(--color-blue-card);
+}
+
+.downloads-heading{
+    color: var(--color-text);
+}
+
+.downloads-secondary{
+    color: var(--color-text-secondary);
+}
+
+.downloads-primary{
+    color: var(--color-primary);
 }

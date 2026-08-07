@@ -6,19 +6,24 @@ import {
   ChevronRight
 } from "lucide-react";
 
-import Logo from "../../assets/logo/company_logo.jpg";
-
+import Logo from "../../assets/logo/company_logo.webp";
+import ThemeToggle from "../ui/ThemeToggle";
 export default function Navbar() {
 
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
+<header
+  className="sticky top-0 z-50 border-b shadow-sm"
+  style={{
+    backgroundColor: "var(--color-surface)",
+    borderColor: "var(--color-border)",
+  }}
+>
 
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-
-        <div className="h-24 flex items-center justify-between">
+        <div className="h-16 md:h-20 lg:h-24 flex items-center justify-between">
 
           {/* Logo */}
 
@@ -30,18 +35,24 @@ export default function Navbar() {
             <img
               src={Logo}
               alt="SHNOOR"
-              className="w-14 h-14 object-contain"
+              width={56}
+              height={56}
+              className="h-10 md:h-12 lg:h-14 w-auto object-contain"
             />
 
             <div>
 
-              <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
+              <h2
+                className="text-lg md:text-xl lg:text-2xl font-extrabold tracking-tight"
+               style={{ color: "var(--color-heading)" }}
+              >
 
                 SHNOOR
 
               </h2>
 
-              <p className="uppercase text-[11px] tracking-[0.35em] text-gray-500">
+              <p className="uppercase text-[9px] sm:text-[10px] md:text-[12px] lg:text-[13px] tracking-[0.35em]"
+              style={{ color: "var(--color-body)" }}>
 
                 AI Interview Platform
 
@@ -57,28 +68,32 @@ export default function Navbar() {
 
             <a
               href="#features"
-              className="font-medium text-gray-700 hover:text-[#0E4B8E] transition"
+              className="font-medium hover:text-[#0E4B8E] transition-colors duration-300"
+              style={{ color: "var(--color-heading)" }}
             >
               Features
             </a>
 
             <a
               href="#workflow"
-              className="font-medium text-gray-700 hover:text-[#0E4B8E] transition"
+              className="font-medium hover:text-[#0E4B8E] transition-colors duration-300"
+             style={{ color: "var(--color-heading)" }}  
             >
               How It Works
             </a>
 
             <a
               href="#proctoring"
-              className="font-medium text-gray-700 hover:text-[#0E4B8E] transition"
+              className="font-medium text-gray-700 hover:text-[#0E4B8E] transition-colors duration-300"
+              style={{ color: "var(--color-heading)" }}
             >
               Proctoring
             </a>
 
             <a
               href="#contact"
-              className="font-medium text-gray-700 hover:text-[#0E4B8E] transition"
+              className="font-medium text-gray-700 hover:text-[#0E4B8E] transition-colors duration-300"
+              style={{ color: "var(--color-heading)" }}
             >
               Contact
             </a>
@@ -89,16 +104,22 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-4">
 
+             <ThemeToggle />
+
             <Link
               to="/login"
-              className="px-6 py-3 rounded-xl border border-gray-300 font-semibold text-gray-700 hover:border-[#0E4B8E] hover:text-[#0E4B8E] transition"
+              className="px-6 py-3 rounded-xl border border-gray-300 font-semibold text-gray-700 hover:border-[#0E4B8E] hover:text-[#0E4B8E] transition-colors duration-300"
+              style={{
+  borderColor: "var(--color-border)",
+  color: "var(--color-heading)",
+}}
             >
               Login
             </Link>
 
             <Link
               to="/register"
-              className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0E4B8E] hover:bg-[#0B3B70] text-white font-semibold transition"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0E4B8E] hover:bg-[#0B3B70] text-white font-semibold transition-colors duration-300"
             >
               Get Started
 
@@ -109,14 +130,21 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
 
-          <button
-            onClick={() => setMobileMenu(!mobileMenu)}
-            className="lg:hidden"
-          >
+          {/* Mobile Menu Button */}
 
-            {mobileMenu ? <X size={28}/> : <Menu size={28}/>}
+            <div className="flex items-center gap-3 lg:hidden">
 
-          </button>
+              <ThemeToggle />
+
+              <button
+                aria-label={mobileMenu ? "Close menu" : "Open menu"}
+                onClick={() => setMobileMenu(!mobileMenu)}
+                className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              >
+                {mobileMenu ? <X size={28} /> : <Menu size={28} />}
+              </button>
+
+            </div>
 
         </div>
 
@@ -126,14 +154,19 @@ export default function Navbar() {
 
       {mobileMenu && (
 
-        <div className="lg:hidden border-t border-gray-200 bg-white">
+        <div className="lg:hidden border-t border-gray-200 bg-white animate-in fade-in slide-in-from-top-2 duration-200"
+        style={{
+  backgroundColor: "var(--color-surface)",
+  borderTop: "1px solid var(--color-border)",
+}}>
 
-          <div className="px-6 py-6 flex flex-col gap-6">
+          <div className="px-4 sm:px-6 py-6 flex flex-col gap-6">
 
             <a
               href="#features"
               onClick={() => setMobileMenu(false)}
-              className="font-medium text-gray-700"
+              className="font-medium"
+              style={{ color: "var(--color-heading)" }}
             >
               Features
             </a>
@@ -141,7 +174,8 @@ export default function Navbar() {
             <a
               href="#workflow"
               onClick={() => setMobileMenu(false)}
-              className="font-medium text-gray-700"
+              className="font-medium"
+              style={{ color: "var(--color-heading)" }}
             >
               How It Works
             </a>
@@ -149,7 +183,8 @@ export default function Navbar() {
             <a
               href="#proctoring"
               onClick={() => setMobileMenu(false)}
-              className="font-medium text-gray-700"
+              className="font-medium"
+              style={{ color: "var(--color-heading)" }}
             >
               Proctoring
             </a>
@@ -157,21 +192,28 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setMobileMenu(false)}
-              className="font-medium text-gray-700"
+              className="font-medium"
+              style={{ color: "var(--color-heading)" }}
             >
               Contact
             </a>
 
             <Link
               to="/login"
-              className="border border-gray-300 rounded-xl py-3 text-center font-semibold"
+              onClick={() => setMobileMenu(false)}
+              className="w-full border  rounded-xl py-3 text-center font-semibold transition-colors duration-300 hover:border-[#0E4B8E] hover:text-[#0E4B8E]"
+              style={{
+  borderColor: "var(--color-border)",
+  color: "var(--color-heading)",
+}}
             >
               Login
             </Link>
 
             <Link
               to="/register"
-              className="bg-[#0E4B8E] rounded-xl py-3 text-center text-white font-semibold"
+              onClick={() => setMobileMenu(false)}
+             className="w-full bg-[#0E4B8E] hover:bg-[#0B3B70] rounded-xl py-3 text-center text-white font-semibold transition-colors duration-300"
             >
               Get Started
             </Link>

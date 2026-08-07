@@ -71,11 +71,11 @@ export default function RecruiterDashboard() {
   }, [])
 
   return (
-  <div className="space-y-8">
+  <div className="recruiter-dashboard space-y-8">
 
     {/* ================= HERO ================= */}
 
-    <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-[#0E4B8E] via-[#1659A5] to-[#2C6CC2] px-10 py-10 text-white shadow-xl">
+    <div className="recruiter-hero relative overflow-hidden rounded-[32px] px-10 py-10 text-white shadow-xl">
 
       <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
 
@@ -93,7 +93,7 @@ export default function RecruiterDashboard() {
 
           <h1 className="font-display text-5xl mt-5">
 
-            Welcome Back
+            Welcome
 
           </h1>
 
@@ -147,14 +147,15 @@ export default function RecruiterDashboard() {
 
           <Card
             key={key}
-            className="rounded-[28px] border-0 shadow-lg p-7 hover:shadow-xl transition-all duration-300"
+           
+            className="recruiter-card rounded-[28px] border-0 shadow-lg p-7 hover:shadow-xl transition-all duration-300"
+
           >
 
-            <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
-
+           <div className="w-14 h-14 rounded-2xl bg-[var(--color-blue-card)]flex items-center justify-center">
               <Icon
-                size={28}
-                className={accent}
+                strokeWidth={2}
+        className={`${accent} w-7 h-7`}
               />
 
             </div>
@@ -165,7 +166,7 @@ export default function RecruiterDashboard() {
 
             </h2>
 
-            <p className="text-gray-500 mt-2">
+            <p className="text-[var(--color-body)] mt-2">
 
               {label}
 
@@ -181,9 +182,9 @@ export default function RecruiterDashboard() {
 
     <div className="grid lg:grid-cols-3 gap-6">
 
-      <Card className="rounded-[28px] border-0 shadow-lg p-7">
+      <Card className="recruiter-card rounded-[28px] border-0 shadow-lg p-7">
 
-        <h2 className="font-display text-2xl">
+        <h2 className="font-display text-2xl text-[var(--color-heading)]">
 
           Quick Actions
 
@@ -193,21 +194,21 @@ export default function RecruiterDashboard() {
 
           <button
             onClick={() => navigate("/recruiter/live")}
-            className="w-full rounded-2xl bg-[#EEF4FF] hover:bg-[#DDEBFF] transition-colors py-4 font-semibold text-[#0E4B8E]"
+            className="w-full rounded-2xl bg-[var(--color-blue-card)] hover:bg-[var(--color-surface-secondary)] transition-colors py-4 font-semibold text-[var(--color-primary)]"
           >
             View Live Interviews
           </button>
 
           <button
             onClick={() => navigate("/recruiter/reports")}
-            className="w-full rounded-2xl bg-[#EEF4FF] hover:bg-[#DDEBFF] transition-colors py-4 font-semibold text-[#0E4B8E]"
+            className="w-full rounded-2xl bg-[var(--color-blue-card)] hover:bg-[var(--color-surface-secondary)] transition-colors py-4 font-semibold text-[var(--color-primary)]"
           >
             View Candidate Reports
           </button>
 
           <button
             onClick={() => navigate("/recruiter/users")}
-            className="w-full rounded-2xl bg-[#EEF4FF] hover:bg-[#DDEBFF] transition-colors py-4 font-semibold text-[#0E4B8E]"
+            className="w-full rounded-2xl bg-[var(--color-blue-card)] hover:bg-[var(--color-surface-secondary)] transition-colors py-4 font-semibold text-[var(--color-primary)]"
           >
             Manage Users
           </button>
@@ -218,9 +219,9 @@ export default function RecruiterDashboard() {
 
       {/* ================= RECENT ACTIVITY ================= */}
 
-      <Card className="rounded-[28px] border-0 shadow-lg p-7">
+      <Card className="recruiter-card rounded-[28px] border-0 shadow-lg p-7">
 
-        <h2 className="font-display text-2xl">
+        <h2 className="font-display text-2xl text-[var(--color-heading)]">
 
           Recent Activity
 
@@ -236,7 +237,7 @@ export default function RecruiterDashboard() {
 
             </p>
 
-            <p className="text-gray-500 text-sm mt-2">
+           <p className="text-[var(--color-body)] text-sm mt-2">
 
               Candidate completed the AI interview successfully.
 
@@ -252,7 +253,7 @@ export default function RecruiterDashboard() {
 
             </p>
 
-            <p className="text-gray-500 text-sm mt-2">
+            <p className="text-[var(--color-body)] text-sm mt-2">
 
               Candidate report is ready for recruiter review.
 
@@ -268,7 +269,7 @@ export default function RecruiterDashboard() {
 
             </p>
 
-            <p className="text-gray-500 text-sm mt-2">
+            <p className="text-[var(--color-body)] text-sm mt-2">
 
               Resume parsed successfully and ready for interview.
 
@@ -282,9 +283,9 @@ export default function RecruiterDashboard() {
 
       {/* ================= RECENT VIOLATIONS ================= */}
 
-      <Card className="rounded-[28px] border-0 shadow-lg p-7">
+      <Card className="recruiter-card rounded-[28px] border-0 shadow-lg p-7">
 
-        <h2 className="font-display text-2xl">
+        <h2 className="font-display text-2xl text-[var(--color-heading)]">
 
           Recent Violations
 
@@ -349,9 +350,9 @@ export default function RecruiterDashboard() {
 
     <div className="grid lg:grid-cols-2 gap-6">
 
-      <Card className="rounded-[28px] border-0 shadow-lg p-8">
+      <Card className="recruiter-card rounded-[28px] border-0 shadow-lg p-8">
 
-        <h2 className="font-display text-2xl">
+        <h2 className="font-display text-2xl text-[var(--color-heading)]">
 
           Platform Status
 
@@ -361,7 +362,7 @@ export default function RecruiterDashboard() {
 
           <div className="flex items-center justify-between">
 
-            <span className="text-gray-600">
+            <span className="text-[var(--color-body)]">
 
               AI Interview Engine
 
@@ -377,7 +378,7 @@ export default function RecruiterDashboard() {
 
           <div className="flex items-center justify-between">
 
-            <span className="text-gray-600">
+            <span className="text-[var(--color-body)]">
 
               Live Proctoring
 
@@ -393,7 +394,7 @@ export default function RecruiterDashboard() {
 
           <div className="flex items-center justify-between">
 
-            <span className="text-gray-600">
+            <span className="text-[var(--color-body)]">
 
               Resume Parser
 
@@ -409,7 +410,7 @@ export default function RecruiterDashboard() {
 
           <div className="flex items-center justify-between">
 
-            <span className="text-gray-600">
+            <span className="text-[var(--color-body)]">
 
               Report Generator
 
@@ -427,15 +428,15 @@ export default function RecruiterDashboard() {
 
       </Card>
 
-      <Card className="rounded-[28px] border-0 shadow-lg p-8">
+      <Card className="recruiter-card rounded-[28px] border-0 shadow-lg p-8">
 
-        <h2 className="font-display text-2xl">
+        <h2 className="font-display text-2xl text-[var(--color-heading)]">
 
           Recruiter Information
 
         </h2>
 
-        <div className="mt-6 space-y-4 text-gray-600 leading-7">
+        <div className="mt-6 space-y-4 text-[var(--color-body)] leading-7">
 
           <p>
 
@@ -453,7 +454,7 @@ export default function RecruiterDashboard() {
 
           </p>
 
-          <p className="text-[#0E4B8E] font-semibold">
+          <p className="text-[var(--color-primary)] font-semibold">
 
             SHNOOR AI Interview Platform
 

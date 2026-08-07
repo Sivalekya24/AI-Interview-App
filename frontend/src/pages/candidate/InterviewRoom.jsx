@@ -464,7 +464,7 @@ useEffect(() => {
   }, [questionNumber, navigate])
 
   return (
-  <div className="min-h-screen bg-[#EEF3FA] px-8 py-8">
+  <div className="interview-room-page min-h-screen px-8 py-8">
 
     <ProctoringManager
       interviewId={interviewId}
@@ -482,7 +482,7 @@ useEffect(() => {
 
       {/* ================= HEADER ================= */}
 
-      <div className="rounded-[32px] bg-gradient-to-r from-[#0E4B8E] via-[#1659A5] to-[#2C6CC2] shadow-xl px-10 py-8 text-white">
+      <div className="rounded-[32px] interview-room-hero shadow-xl px-10 py-8 text-white">
 
         <div className="flex items-center justify-between">
 
@@ -543,7 +543,7 @@ useEffect(() => {
 
         <div className="col-span-1 space-y-6">
 
-          <Card className="rounded-[28px] overflow-hidden shadow-lg border-0">
+          <Card className="interview-room-card rounded-[28px] overflow-hidden shadow-lg border-0">
 
             <div className="px-6 py-5 border-b border-gray-200 flex items-center justify-between">
 
@@ -593,7 +593,7 @@ useEffect(() => {
 
           </Card>
 
-          <Card className="rounded-[28px] p-6 shadow-lg border-0">
+          <Card className="interview-room-card rounded-[28px] p-6 shadow-lg border-0">
 
             <div className="flex items-center justify-between mb-5">
 
@@ -632,7 +632,7 @@ useEffect(() => {
 
   {/* Question Card */}
 
-  <Card className="rounded-[28px] border-0 shadow-lg p-8">
+  <Card className="interview-room-card rounded-[28px] border-0 shadow-lg p-8">
 
     <div className="flex items-center justify-between mb-6">
 
@@ -660,7 +660,7 @@ useEffect(() => {
 
         </p>
 
-        <p className="font-semibold text-[#0E4B8E]">
+       <p className="font-semibold interview-room-primary">
 
           {questionNumber}/{TOTAL_QUESTIONS}
 
@@ -673,7 +673,7 @@ useEffect(() => {
     <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-8">
 
       <motion.div
-        className="h-full bg-[#0E4B8E]"
+        className="h-full interview-room-progress"
         animate={{
           width: `${(questionNumber / TOTAL_QUESTIONS) * 100}%`,
         }}
@@ -690,7 +690,9 @@ useEffect(() => {
 
         <Loader2
           size={40}
-          className="animate-spin text-[#0E4B8E]"
+         
+className="animate-spin interview-room-primary"
+
         />
 
         <p className="mt-5 text-gray-500">
@@ -712,7 +714,7 @@ useEffect(() => {
           exit={{ opacity: 0, y: -12 }}
         >
 
-          <p className="text-2xl text-gray-800 leading-10 font-medium">
+          <p className="text-2xl interview-room-heading leading-10 font-medium">
 
             {question}
 
@@ -728,7 +730,7 @@ useEffect(() => {
 
   {/* Controls */}
 
-  <Card className="rounded-[28px] border-0 shadow-lg p-8">
+  <Card className="interview-room-card rounded-[28px] border-0 shadow-lg p-8">
 
     <div className="text-center">
 
@@ -771,14 +773,14 @@ useEffect(() => {
             isSpeaking
           }
           onClick={startRecording}
-          className="w-20 h-20 rounded-full bg-[#0E4B8E] text-white shadow-lg flex items-center justify-center hover:scale-105 transition-all disabled:opacity-50"
+          className="w-20 h-20 rounded-full interview-room-button text-white shadow-lg flex items-center justify-center hover:scale-105 transition-all disabled:opacity-50"
         >
 
           {isSubmitting ? (
 
             <Loader2
               size={30}
-              className="animate-spin"
+              className="animate-spin interview-room-primary"
             />
 
           ) : (
@@ -805,7 +807,7 @@ useEffect(() => {
       <button
         onClick={() => speakQuestion(question)}
         disabled={isSpeaking || !question}
-        className="px-8 rounded-2xl border-2 border-[#0E4B8E] text-[#0E4B8E] hover:bg-[#0E4B8E] hover:text-white transition-all flex items-center gap-3"
+        className="interview-room-outline-button px-8 rounded-2xl transition-all flex items-center gap-3"
       >
 
         <Volume2 size={20} />
@@ -823,7 +825,7 @@ useEffect(() => {
 
 <div className="col-span-1">
 
-  <Card className="rounded-[28px] border-0 shadow-lg h-full flex flex-col overflow-hidden">
+  <Card className="interview-room-card rounded-[28px] border-0 shadow-lg h-full flex flex-col overflow-hidden">
 
     <div className="px-6 py-5 border-b border-gray-200">
 
@@ -847,11 +849,11 @@ useEffect(() => {
 
         <div className="h-full flex flex-col items-center justify-center text-center py-16">
 
-          <div className="w-16 h-16 rounded-full bg-[#EEF4FF] flex items-center justify-center">
+          <div className="w-16 h-16 rounded-full interview-room-blue-bg flex items-center justify-center">
 
             <Volume2
               size={28}
-              className="text-[#0E4B8E]"
+              className="interview-room-primary"
             />
 
           </div>
@@ -890,8 +892,8 @@ useEffect(() => {
           }}
           className={`rounded-2xl p-4 ${
             entry.role === "interviewer"
-              ? "bg-[#EEF4FF]"
-              : "bg-[#F8FAFC] border border-gray-200"
+              ? "interview-room-ai-message"
+              : "interview-room-user-message"
           }`}
         >
 
@@ -922,7 +924,7 @@ useEffect(() => {
           animate={{
             opacity: 1,
           }}
-          className="rounded-2xl bg-[#FFF8E8] border border-[#F4A321]/30 p-4"
+          className="rounded-2xl interview-room-listening p-4"
         >
 
           <p className="uppercase tracking-widest text-[10px] font-semibold text-[#F4A321]">
@@ -943,7 +945,7 @@ useEffect(() => {
 
     </div>
 
-    <div className="border-t border-gray-200 px-6 py-4 bg-gray-50">
+    <div className="border-t border-gray-200 px-6 py-4 interview-room-footer">
 
       <div className="flex items-center justify-between">
 

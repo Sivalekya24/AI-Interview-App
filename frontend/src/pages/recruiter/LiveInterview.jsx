@@ -208,7 +208,7 @@ export default function LiveInterview() {
 
     return (
 
-        <div className="space-y-8">
+        <div className="live-interview-page space-y-8">
 
             {/* Header */}
 
@@ -222,7 +222,7 @@ export default function LiveInterview() {
                             navigate("/recruiter/live")
                         }
 
-                        className="flex items-center gap-2 text-[#0E4B8E] hover:underline"
+                        className="flex items-center gap-2 live-interview-primary hover:underline"
 
                     >
 
@@ -232,13 +232,13 @@ export default function LiveInterview() {
 
                     </button>
 
-                    <h1 className="font-display text-4xl mt-4">
+                   <h1 className="font-display text-4xl mt-4 live-interview-heading">
 
                         Live Interview
 
                     </h1>
 
-                    <p className="text-gray-500 mt-2">
+                    <p className=" mt-2 live-interview-text">
 
                         Monitor the interview in real time.
 
@@ -250,8 +250,7 @@ export default function LiveInterview() {
 
                     onClick={fetchInterview}
 
-                    className="rounded-xl"
-
+                    className="rounded-xl live-interview-button"
                 >
 
                     <RefreshCcw size={18} />
@@ -269,8 +268,7 @@ export default function LiveInterview() {
 
                         <User
 
-                            className="text-[#0E4B8E]"
-
+                            className="live-interview-primary"
                             size={26}
 
                         />
@@ -287,7 +285,7 @@ export default function LiveInterview() {
 
                         <div>
 
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm live-interview-text">
 
                                 Full Name
 
@@ -303,7 +301,7 @@ export default function LiveInterview() {
 
                         <div>
 
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm live-interview-text">
 
                                 Email
 
@@ -325,7 +323,7 @@ export default function LiveInterview() {
 
                         <div>
 
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm live-interview-text">
 
                                 Resume
 
@@ -350,7 +348,7 @@ export default function LiveInterview() {
                     </div>
 
                 </Card>
-                                <Card className="col-span-8 rounded-3xl p-6 shadow-lg">
+                    <Card className="live-interview-card col-span-4 rounded-3xl p-6 shadow-lg">
 
                     <div className="flex items-center gap-3">
 
@@ -358,7 +356,7 @@ export default function LiveInterview() {
 
                             size={26}
 
-                            className="text-[#0E4B8E]"
+                            className="live-interview-primary"
 
                         />
 
@@ -374,7 +372,7 @@ export default function LiveInterview() {
 
                         <div>
 
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm live-interview-text">
 
                                 Status
 
@@ -398,7 +396,7 @@ export default function LiveInterview() {
 
                         <div>
 
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm live-interview-text">
 
                                 Difficulty
 
@@ -414,7 +412,7 @@ export default function LiveInterview() {
 
                         <div>
 
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm live-interview-text">
 
                                 Current Question
 
@@ -427,11 +425,11 @@ export default function LiveInterview() {
                             </h3>
                             <div className="mt-4">
 
-    <div className="w-full h-3 rounded-full bg-gray-200">
+    <div className="w-full h-3 rounded-full live-interview-progress-bg">
 
         <div
 
-            className="h-3 rounded-full bg-[#0E4B8E]"
+            className="h-3 rounded-full live-interview-progress"
 
             style={{
 
@@ -453,7 +451,7 @@ export default function LiveInterview() {
 
                         <div>
 
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm live-interview-text">
 
                                 Started At
 
@@ -484,13 +482,12 @@ export default function LiveInterview() {
                 </Card>
                                 {/* Live Camera */}
 
-                <Card className="col-span-8 rounded-3xl p-6 shadow-lg">
-
+                <Card className="live-interview-card col-span-4 rounded-3xl p-6 shadow-lg">
                     <div className="flex items-center gap-3">
 
                         <Camera
                             size={26}
-                            className="text-[#0E4B8E]"
+                            className="live-interview-primary"
                         />
 
                         <h2 className="font-display text-2xl">
@@ -505,16 +502,13 @@ export default function LiveInterview() {
                         className="
                             mt-6
                             rounded-2xl
-                            border-2
-                            border-dashed
-                            border-gray-300
-                            bg-black
+                            live-interview-camera
                             h-[420px]
                             flex
                             items-center
                             justify-center
                             overflow-hidden
-                        "
+                            "
                     >
 
                         {frame ? (
@@ -537,7 +531,7 @@ export default function LiveInterview() {
             className="text-gray-500"
         />
 
-        <p className="text-gray-400 text-lg">
+        <p className="live-interview-text text-lg">
 
             Waiting for candidate camera...
 
@@ -553,7 +547,7 @@ export default function LiveInterview() {
 
                 {/* Violations */}
 
-                <Card className="col-span-4 rounded-3xl p-6 shadow-lg">
+                <Card className="live-interview-card col-span-4 rounded-3xl p-6 shadow-lg">
 
                     <div className="flex items-center gap-3">
 
@@ -580,23 +574,17 @@ export default function LiveInterview() {
 
                                     key={violation.id}
 
-                                    className="
-                                        rounded-2xl
-                                        border
-                                        border-red-100
-                                        bg-red-50
-                                        p-4
-                                    "
+                                    className="live-interview-violation rounded-2xl p-4"
 
                                 >
 
-                                    <h4 className="font-semibold text-red-700">
+                                    <h4 className="font-semibold live-interview-danger">
 
                                         {violation.type}
 
                                     </h4>
 
-                                    <p className="text-sm text-gray-600 mt-1">
+                                    <p className="text-sm live-interview-text mt-1">
 
                                         {violation.description}
 
@@ -614,7 +602,7 @@ export default function LiveInterview() {
 
                         ) : (
 
-                            <div className="text-center py-10 text-gray-400">
+                            <div className="text-center py-10 live-interview-text">
 
                                 No violations detected
 
@@ -627,7 +615,7 @@ export default function LiveInterview() {
                 </Card>
                                 {/* Recruiter Actions */}
 
-                <Card className="col-span-12 rounded-3xl p-6 shadow-lg">
+                <Card className="live-interview-card col-span-12 rounded-3xl p-6 shadow-lg">
 
                     <div className="flex items-center justify-between">
 
@@ -639,7 +627,7 @@ export default function LiveInterview() {
 
                             </h2>
 
-                            <p className="text-gray-500 mt-2">
+                            <p className="live-interview-text mt-2">
 
                                 Control the running interview.
 
@@ -653,7 +641,7 @@ export default function LiveInterview() {
 
                                 onClick={fetchInterview}
 
-                                className="rounded-xl"
+                               className="rounded-xl live-interview-button"
 
                             >
 
@@ -669,8 +657,7 @@ export default function LiveInterview() {
 
                                 disabled={terminating}
 
-                                className="rounded-xl bg-red-600 hover:bg-red-700"
-
+                               className="rounded-xl live-interview-danger-button"
                             >
 
                                 <Ban size={18} />

@@ -74,23 +74,22 @@ export default function ContactMessages() {
   return (
     <div className="space-y-8">
 
-      <div>
+     <div className="contact-messages-page space-y-8">
 
-        <p className="uppercase tracking-[0.35em] text-sm text-slate-400">
+        <p className="contact-messages-secondary uppercase tracking-[0.35em] text-sm">
 
           Recruiter
 
         </p>
 
-        <h1 className="font-display text-4xl mt-3">
-
+       <h1 className="contact-messages-heading font-display text-4xl mt-3">
           Contact Messages
 
         </h1>
 
       </div>
 
-      <Card className="rounded-[28px] p-6 shadow-lg border-0">
+     <Card className="contact-messages-card rounded-[28px] p-6 shadow-lg border-0">
 
         <div className="overflow-x-auto">
 
@@ -98,7 +97,7 @@ export default function ContactMessages() {
 
             <thead>
 
-              <tr className="border-b">
+              <tr className="contact-messages-border">
 
                 <th className="text-left py-4">Name</th>
                 <th className="text-left">Email</th>
@@ -116,7 +115,7 @@ export default function ContactMessages() {
 
                 <tr
                   key={message.id}
-                  className="border-b hover:bg-slate-50"
+                  className="contact-messages-border contact-messages-row"
                 >
 
                   <td className="py-5">
@@ -136,8 +135,8 @@ export default function ContactMessages() {
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-semibold ${
                         message.status === "READ"
-                          ? "bg-green-100 text-green-700"
-                          : "bg-yellow-100 text-yellow-700"
+                          ? "contact-status-read"
+                          : "contact-status-new"
                       }`}
                     >
 
@@ -164,7 +163,7 @@ export default function ContactMessages() {
                       >
 
                         <Eye
-                          className="text-blue-600"
+                         className="contact-primary"
                           size={18}
                         />
 
@@ -218,13 +217,13 @@ export default function ContactMessages() {
 
       {selected && (
 
-        <Card className="rounded-[28px] p-8 shadow-lg border-0">
+        <Card className="contact-messages-card rounded-[28px] p-8 shadow-lg border-0">
 
           <div className="flex items-center gap-3">
 
-            <Mail className="text-[#0E4B8E]" />
+            <Mail className="contact-primary" />
 
-            <h2 className="font-display text-2xl">
+           <h2 className="contact-messages-heading font-display text-2xl">
 
               Message Details
 
@@ -236,7 +235,7 @@ export default function ContactMessages() {
 
             <div>
 
-              <p className="text-sm text-gray-500">
+              <p className="contact-messages-secondary text-sm">
 
                 Name
 
@@ -252,7 +251,7 @@ export default function ContactMessages() {
 
             <div>
 
-              <p className="text-sm text-gray-500">
+              <p className="text-sm contact-messages-secondary">
 
                 Email
 
@@ -268,13 +267,13 @@ export default function ContactMessages() {
 
             <div>
 
-              <p className="text-sm text-gray-500">
+              <p className="text-sm contact-messages-secondary">
 
                 Message
 
               </p>
 
-              <p className="mt-2 leading-7">
+              <p className="contact-messages-text mt-2 leading-7">
 
                 {selected.message}
 

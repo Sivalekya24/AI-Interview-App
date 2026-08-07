@@ -1,4 +1,4 @@
-import companyLogo from "../../assets/logo/company_logo.jpg";
+import companyLogo from "../../assets/logo/company_logo.webp";
 
 export default function Logo({
   size = 60,
@@ -24,22 +24,20 @@ export default function Logo({
         <div className="leading-tight">
 
           <h2
-            className={`font-black ${
-              dark ? "text-slate-900" : "text-white"
-            }`}
+            className="logo-heading font-black"
             style={{
               fontSize: "2rem",
+              color: dark ? "var(--color-heading)" : "#FFFFFF",
             }}
           >
             SHNOOR
           </h2>
 
           <p
-            className={`uppercase tracking-[0.35em] ${
-              dark ? "text-slate-500" : "text-slate-300"
-            }`}
+            className="logo-subtitle uppercase tracking-[0.35em]"
             style={{
               fontSize: "0.78rem",
+              color: dark ? "var(--color-body)" : "#CBD5E1",
             }}
           >
             AI INTERVIEW PLATFORM

@@ -57,12 +57,12 @@ export default function Downloads() {
 
       <div className="grid grid-cols-2 gap-4">
         {EXPORTS.map((item) => (
-          <Card key={item.key} className="p-6">
-            <div className="w-9 h-9 rounded-md bg-panel-raised flex items-center justify-center mb-4">
-              <item.icon size={16} className="text-signal" />
+          <Card key={item.key} className="downloads-card p-6">
+            <div className="downloads-icon w-9 h-9 rounded-md flex items-center justify-center mb-4">
+              <item.icon size={16} className="downloads-primary" />
             </div>
-            <p className="text-sm text-ink font-medium">{item.title}</p>
-            <p className="text-xs text-muted mt-1.5 leading-relaxed">{item.description}</p>
+            <p className="downloads-heading text-sm font-medium">{item.title}</p>
+            <p className="text-xs downloads-secondary mt-1.5 leading-relaxed">{item.description}</p>
             <Button
               variant="secondary"
               className="mt-4 w-full"

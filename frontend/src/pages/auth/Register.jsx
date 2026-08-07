@@ -66,9 +66,9 @@ export default function Register() {
 
   return (
 
-    <div className="min-h-screen bg-[#EEF3FA] flex items-center justify-center px-6 py-10">
+    <div className="auth-page min-h-screen bg-[#EEF3FA] flex items-center justify-center px-6 py-10">
 
-     <div className="w-full max-w-7xl min-h-[90vh] bg-white rounded-[28px] shadow-2xl overflow-hidden grid lg:grid-cols-[42%_58%]">
+     <div className="auth-card w-full max-w-7xl min-h-[90vh]  rounded-[28px] shadow-2xl overflow-hidden grid lg:grid-cols-[42%_58%]">
         {/* LEFT PANEL */}
 
         <div className="bg-[#0E4B8E] text-white p-14 flex flex-col justify-between">
@@ -131,13 +131,13 @@ export default function Register() {
 
           <div className="w-full max-w-lg">
 
-            <h2 className="font-display text-6xl text-[#111827]">
+            <h2 className="auth-heading font-display text-6xl">
 
               Create Account
 
             </h2>
 
-            <p className="mt-4 text-gray-500 text-xl leading-8">
+            <p className="mt-4 auth-text text-xl leading-8">
 
               Join the SHNOOR AI Interview Platforms.
 
@@ -213,7 +213,7 @@ export default function Register() {
 
 <div className="text-center pt-2">
 
-  <p className="text-gray-600">
+  <p className="auth-text text-sm">
 
     Already have an account?{" "}
 

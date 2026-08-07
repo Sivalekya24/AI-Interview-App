@@ -75,9 +75,9 @@ export default function Login() {
 
   return (
 
-    <div className="min-h-screen bg-[#EEF3FA] flex items-center justify-center px-6 py-10">
+    <div className="auth-page min-h-screen bg-[#EEF3FA] flex items-center justify-center px-6 py-10">
 
-      <div className="w-full max-w-7xl min-h-[90vh] bg-white rounded-[28px] shadow-2xl overflow-hidden grid lg:grid-cols-[42%_58%]">
+      <div className="auth-card w-full max-w-7xl min-h-[90vh]  rounded-[28px] shadow-2xl overflow-hidden grid lg:grid-cols-[42%_58%]">
 
         {/* LEFT PANEL */}
 
@@ -185,13 +185,13 @@ export default function Login() {
 
 <div className="w-full max-w-lg">
 
-<h2 className="font-display text-6xl text-[#111827]">
+<h2 className="auth-heading font-display text-6xl">
 
 Welcome Back
 
 </h2>
 
-<p className="mt-4 text-gray-500 text-xl leading-8">
+<p className="auth-text mt-4  text-xl leading-8">
 
 Sign in to continue to your AI Interview
 workspace.
@@ -232,7 +232,7 @@ className="space-y-5 mt-8"
 
 <div className="flex items-center justify-between text-sm">
 
-  <label className="flex items-center gap-2 text-gray-600">
+  <label className="auth-text flex items-center gap-2">
 
     <input
       type="checkbox"
@@ -278,7 +278,7 @@ className="space-y-5 mt-8"
 
   <div className="flex-1 border-t border-gray-200"></div>
 
-  <span className="text-gray-400 text-sm">
+  <span className="auth-text text-sm">
 
     OR
 
@@ -349,7 +349,7 @@ className="space-y-5 mt-8"
 
 <div className="text-center pt-2">
 
-  <p className="text-gray-600">
+  <p className="auth-text text-sm">
 
     Don't have an account?{" "}
 

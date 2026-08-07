@@ -1,30 +1,34 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import { AuthProvider } from './lib/auth-context'
 import ProtectedRoute from './lib/protected-route'
+const LandingPage = lazy(() => import("./pages/LandingPage"));
 
-import Login from './pages/auth/Login'
-import Register from './pages/auth/Register'
-import LandingPage from "./pages/LandingPage";
-import CandidateLayout from './components/layout/CandidateLayout'
-import CandidateDashboard from './pages/candidate/Dashboard'
-import ResumeUpload from './pages/candidate/ResumeUpload'
-import InterviewInstructions from './pages/candidate/InterviewInstructions'
-import InterviewRoom from './pages/candidate/InterviewRoom'
-import InterviewComplete from './pages/candidate/InterviewComplete'
-import ForgotPassword from "./pages/auth/ForgotPassword";
-import ResetPassword from "./pages/auth/ResetPassword";
-import RecruiterLayout from './components/layout/RecruiterLayout'
-import RecruiterDashboard from './pages/recruiter/Dashboard'
-import LiveProctoring from './pages/recruiter/LiveProctoring'
-import InterviewList from './pages/recruiter/InterviewList'
-import InterviewDetail from './pages/recruiter/InterviewDetail'
-import Reports from './pages/recruiter/Reports'
-import Violations from './pages/recruiter/Violations'
-import UserManagement from './pages/recruiter/UserManagement'
-import Downloads from './pages/recruiter/Downloads'
-import LiveInterview from "./pages/recruiter/LiveInterview";
-import ContactMessages from "./pages/recruiter/ContactMessages";
+const Login = lazy(() => import("./pages/auth/Login"));
+const Register = lazy(() => import("./pages/auth/Register"));
+
+const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
+const ResetPassword = lazy(() => import("./pages/auth/ResetPassword"));
+
+const CandidateLayout = lazy(() => import("./components/layout/CandidateLayout"));
+const CandidateDashboard = lazy(() => import("./pages/candidate/Dashboard"));
+const ResumeUpload = lazy(() => import("./pages/candidate/ResumeUpload"));
+const InterviewInstructions = lazy(() => import("./pages/candidate/InterviewInstructions"));
+const InterviewRoom = lazy(() => import("./pages/candidate/InterviewRoom"));
+const InterviewComplete = lazy(() => import("./pages/candidate/InterviewComplete"));
+
+const RecruiterLayout = lazy(() => import("./components/layout/RecruiterLayout"));
+const RecruiterDashboard = lazy(() => import("./pages/recruiter/Dashboard"));
+const LiveProctoring = lazy(() => import("./pages/recruiter/LiveProctoring"));
+const LiveInterview = lazy(() => import("./pages/recruiter/LiveInterview"));
+const InterviewList = lazy(() => import("./pages/recruiter/InterviewList"));
+const InterviewDetail = lazy(() => import("./pages/recruiter/InterviewDetail"));
+const Reports = lazy(() => import("./pages/recruiter/Reports"));
+const Violations = lazy(() => import("./pages/recruiter/Violations"));
+const UserManagement = lazy(() => import("./pages/recruiter/UserManagement"));
+const Downloads = lazy(() => import("./pages/recruiter/Downloads"));
+const ContactMessages = lazy(() => import("./pages/recruiter/ContactMessages"));
 export default function App() {
   return (
     <AuthProvider>
@@ -35,6 +39,7 @@ export default function App() {
             style: { background: '#12161f', color: '#e7eaf0', border: '1px solid #232935', fontSize: '13px' },
           }}
         />
+        <Suspense fallback={<div className="min-h-screen bg-white" />}>
         <Routes>
           <Route path="/" element={<LandingPage />}/>
           <Route path="/login" element={<Login />} />
@@ -83,6 +88,7 @@ export default function App() {
     element={<Navigate to="/" replace />}
 />
         </Routes>
+         </Suspense>
       </BrowserRouter>
     </AuthProvider>
   )

@@ -36,18 +36,15 @@ export default function ProctoringTile({
 
     <div
       onClick={onClick}
-      className="
-        cursor-pointer
-        rounded-2xl
-        border
-        border-line
-        bg-panel
-        hover:border-[#0E4B8E]
-        hover:shadow-xl
-        transition-all
-        duration-300
-        p-6
-        space-y-6
+            className="
+      proctoring-tile
+      cursor-pointer
+      rounded-2xl
+      hover:shadow-xl
+      transition-all
+      duration-300
+      p-6
+      space-y-6
       "
     >
 
@@ -57,13 +54,13 @@ export default function ProctoringTile({
 
         <div>
 
-          <h2 className="text-xl font-bold text-ink">
+          <h2 className="proctoring-tile-heading text-xl font-bold">
 
             {candidateName}
 
           </h2>
 
-          <p className="text-sm text-muted mt-1">
+          <p className="proctoring-tile-text text-sm mt-1">
 
             Candidate Interview
 
@@ -87,7 +84,7 @@ export default function ProctoringTile({
 
       {/* Interview Information */}
 
-      <div className="rounded-2xl bg-void border border-line p-5 space-y-4">
+      <div className="proctoring-tile-panel rounded-2xl p-5 space-y-4">
 
         <div className="flex items-center justify-between">
 
@@ -95,10 +92,10 @@ export default function ProctoringTile({
 
             <BookOpen
               size={18}
-              className="text-[#0E4B8E]"
+              className="proctoring-tile-primary"
             />
 
-            <span className="text-sm text-muted">
+            <span className="text-sm proctoring-tile-text">
 
               Current Question
 
@@ -106,7 +103,7 @@ export default function ProctoringTile({
 
           </div>
 
-          <span className="font-semibold text-ink">
+          <span className="proctoring-tile-heading font-semibold">
 
             {currentQuestion} / {totalQuestions}
 
@@ -120,10 +117,10 @@ export default function ProctoringTile({
 
             <Activity
               size={18}
-              className="text-[#0E4B8E]"
+              className="proctoring-tile-primary"
             />
 
-            <span className="text-sm text-muted">
+            <span className="text-sm proctoring-tile-text">
 
               Difficulty
 
@@ -131,7 +128,7 @@ export default function ProctoringTile({
 
           </div>
 
-          <span className="font-semibold text-ink">
+          <span className="proctoring-tile-heading font-semibold">
 
             {difficulty}
 
@@ -145,10 +142,10 @@ export default function ProctoringTile({
 
             <Clock3
               size={18}
-              className="text-[#0E4B8E]"
+              className="proctoring-tile-primary"
             />
 
-            <span className="text-sm text-muted">
+            <span className="text-sm proctoring-tile-text">
 
               Duration
 
@@ -156,7 +153,7 @@ export default function ProctoringTile({
 
           </div>
 
-          <span className="font-semibold text-ink">
+          <span className="proctoring-tile-heading font-semibold">
 
             {duration} min
 
@@ -170,9 +167,9 @@ export default function ProctoringTile({
 
       <div className="grid grid-cols-2 gap-4">
 
-        <div className="rounded-2xl bg-red-50 border border-red-100 p-4">
+        <div className="proctoring-tile-danger-box rounded-2xl p-4">
 
-          <p className="text-xs text-gray-500">
+          <p className="proctoring-tile-text text-xs">
 
             Violations
 
@@ -204,16 +201,14 @@ export default function ProctoringTile({
 
           }}
           className="
-            rounded-2xl
-            bg-[#0E4B8E]
-            hover:bg-[#0B417C]
-            text-white
-            flex
-            items-center
-            justify-center
-            gap-2
-            font-semibold
-            transition-all
+          proctoring-tile-button
+          rounded-2xl
+          flex
+          items-center
+          justify-center
+          gap-2
+          font-semibold
+          transition-all
           "
         >
 

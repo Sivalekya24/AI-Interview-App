@@ -76,16 +76,15 @@ useEffect(() => {
 
   return (
 
-    <div className="min-h-screen flex bg-[#EEF3FA]">
+    <div className="recruiter-layout min-h-screen flex">
 
       {/* ================= SIDEBAR ================= */}
 
-      <aside className="w-72 bg-white border-r border-slate-200 shadow-sm flex flex-col">
+      <aside className="recruiter-sidebar w-72  border-r  shadow-sm flex flex-col">
 
         {/* ================= LOGO ================= */}
 
-        <div className="px-8 py-8 border-b border-slate-200">
-
+        <div className="px-8 py-8 border-b recruiter-border">
           <Logo size={26} />
 
         </div>
@@ -103,7 +102,7 @@ useEffect(() => {
                 `group flex items-center gap-4 rounded-2xl px-5 py-4 transition-all duration-300 ${
                   isActive
                     ? "bg-[#0E4B8E] text-white shadow-lg"
-                    : "text-slate-500 hover:bg-[#EEF4FF] hover:text-[#0E4B8E]"
+                    : "recruiter-nav-item"
                 }`
               }
             >
@@ -126,9 +125,9 @@ useEffect(() => {
         </nav>
                 {/* ================= USER ================= */}
 
-        <div className="border-t border-slate-200 p-5">
+       <div className="border-t recruiter-border p-5">
 
-          <div className="rounded-3xl bg-[#EEF4FF] p-5">
+          <div className="recruiter-user-card rounded-3xl p-5">
 
             <div className="flex items-center gap-4">
 
@@ -143,7 +142,7 @@ useEffect(() => {
 
               <div>
 
-                <h3 className="font-semibold text-[#111827]">
+                <h3 className="recruiter-heading font-semibold">
 
                   {user?.full_name ??
                     user?.name ??
@@ -151,7 +150,7 @@ useEffect(() => {
 
                 </h3>
 
-                <p className="text-sm text-slate-500 mt-1">
+                <p className="recruiter-text text-sm mt-1">
 
                   {user?.email}
 
@@ -184,7 +183,7 @@ useEffect(() => {
 
         {/* ================= HEADER ================= */}
 
-        <header className="bg-white border-b border-slate-200 px-10 py-6 flex items-center justify-between">
+        <header className="recruiter-header border-b px-10 py-6 flex items-center justify-between">
 
           <div>
 
@@ -194,13 +193,13 @@ useEffect(() => {
 
             </p>
 
-            <h1 className="font-display text-3xl mt-2 text-[#111827]">
+            <h1 className="recruiter-heading font-display text-3xl mt-2">
 
-              Welcome Back 👋
+              Welcome👋
 
             </h1>
 
-            <p className="text-slate-500 mt-2">
+            <p className="recruiter-text mt-2">
 
               Monitor interviews, review AI evaluations,
               and manage candidates from one place.
@@ -215,7 +214,7 @@ useEffect(() => {
 
              <Bell
     size={24}
-    className="text-slate-600"
+    className="recruiter-text"
 />
 
 {stats?.running_interviews > 0 && (
@@ -245,7 +244,7 @@ useEffect(() => {
 
               <div>
 
-                <p className="font-semibold">
+                <p className="recruiter-heading font-semibold">
 
                   {user?.full_name ??
                     user?.name ??
@@ -253,7 +252,7 @@ useEffect(() => {
 
                 </p>
 
-                <p className="text-xs text-slate-500">
+                <p className="recruiter-text text-xs">
 
                   Recruiter
 

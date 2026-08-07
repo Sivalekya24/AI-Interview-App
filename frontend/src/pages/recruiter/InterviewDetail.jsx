@@ -254,11 +254,10 @@ export default function InterviewDetail() {
   }
     return (
 
-    <div className="space-y-8">
-
+    <div className="interview-detail-page space-y-8">
       {/* ================= HERO ================= */}
 
-      <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-[#0E4B8E] via-[#1659A5] to-[#2C6CC2] px-10 py-10 text-white shadow-xl">
+      <div className="interview-detail-hero relative overflow-hidden rounded-[32px] px-10 py-10 text-white shadow-xl">
 
         <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
 
@@ -329,13 +328,13 @@ export default function InterviewDetail() {
 
         {/* Candidate */}
 
-        <Card className="rounded-[28px] border-0 shadow-lg p-6">
+        <Card className="interview-detail-card rounded-[28px] border-0 shadow-lg p-6">
 
-          <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+          <div className="w-14 h-14 rounded-2xl interview-detail-blue-bg flex items-center justify-center">
 
             <User
               size={28}
-              className="text-[#0E4B8E]"
+              className="interview-detail-primary"
             />
 
           </div>
@@ -364,9 +363,9 @@ export default function InterviewDetail() {
 
         {/* Status */}
 
-        <Card className="rounded-[28px] border-0 shadow-lg p-6">
+        <Card className="interview-detail-card rounded-[28px] border-0 shadow-lg p-6">
 
-          <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+          <div className="w-14 h-14 rounded-2xl interview-detail-blue-bg flex items-center justify-center">
 
             <CheckCircle2
               size={28}
@@ -422,13 +421,13 @@ export default function InterviewDetail() {
 
         {/* Resume */}
 
-<Card className="rounded-[28px] border-0 shadow-lg p-6">
+<Card className="interview-detail-card rounded-[28px] border-0 shadow-lg p-6">
 
-  <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+  <div className="w-14 h-14 rounded-2xl interview-detail-blue-bg flex items-center justify-center">
 
     <FileText
       size={28}
-      className="text-[#0E4B8E]"
+      className="interview-detail-primary"
     />
 
   </div>
@@ -492,8 +491,7 @@ export default function InterviewDetail() {
 
       }}
 
-      className="flex items-center gap-2 rounded-xl bg-[#EEF4FF] hover:bg-[#DDEBFF] px-4 py-2 font-semibold text-[#0E4B8E]"
-
+      className="flex items-center gap-2 rounded-xl interview-detail-blue-bg interview-detail-primary px-4 py-2 font-semibold"
     >
 
       <Eye size={18} />
@@ -538,7 +536,7 @@ export default function InterviewDetail() {
 
       }}
 
-      className="flex items-center gap-2 rounded-xl bg-[#0E4B8E] hover:bg-[#0A3B73] px- py-2 text-white font-semibold"
+      className="flex items-center gap-2 rounded-xl interview-detail-blue-bg interview-detail-primary px-4 py-2 font-semibold"
 
     >
 
@@ -554,13 +552,13 @@ export default function InterviewDetail() {
 
         {/* Difficulty */}
 
-        <Card className="rounded-[28px] border-0 shadow-lg p-6">
+        <Card className="interview-detail-card rounded-[28px] border-0 shadow-lg p-6">
 
-          <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+          <div className="w-14 h-14 rounded-2xl interview-detail-blue-bg flex items-center justify-center">
 
             <SquareTerminal
               size={28}
-              className="text-[#0E4B8E]"
+              className="interview-detail-primary"
             />
 
           </div>
@@ -582,13 +580,13 @@ export default function InterviewDetail() {
 
         {/* Started */}
 
-        <Card className="rounded-[28px] border-0 shadow-lg p-6">
+        <Card className="interview-detail-card rounded-[28px] border-0 shadow-lg p-6">
 
-          <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+          <div className="w-14 h-14 rounded-2xl interview-detail-blue-bg flex items-center justify-center">
 
             <Clock3
               size={28}
-              className="text-[#0E4B8E]"
+              className="interview-detail-primary"
             />
 
           </div>
@@ -615,13 +613,13 @@ export default function InterviewDetail() {
 
         {/* Completed */}
 
-        <Card className="rounded-[28px] border-0 shadow-lg p-6">
+        <Card className="interview-detail-card rounded-[28px] border-0 shadow-lg p-6">
 
-          <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+          <div className="w-14 h-14 rounded-2xl interview-detail-blue-bg flex items-center justify-center">
 
             <Clock3
               size={28}
-              className="text-green-600"
+              className="interview-detail-primary"
             />
 
           </div>
@@ -665,8 +663,8 @@ export default function InterviewDetail() {
 
               className={`flex items-center gap-3 rounded-2xl px-6 py-3 transition-all duration-300 ${
                 tab === id
-                  ? "bg-[#0E4B8E] text-white shadow-lg"
-                  : "bg-white text-slate-600 hover:bg-[#EEF4FF]"
+                  ? "interview-detail-button shadow-lg"
+                  : "interview-detail-card hover:interview-detail-blue-bg text-slate-600"
               }`}
 
             >
@@ -689,7 +687,7 @@ export default function InterviewDetail() {
 
           {!report ? (
 
-            <Card className="rounded-[30px] p-8">
+            <Card className="interview-detail-card rounded-[30px] p-8">
 
               <p className="text-gray-500">
 
@@ -732,10 +730,10 @@ export default function InterviewDetail() {
 
                   <Card
                     key={item.title}
-                    className="rounded-[28px] border-0 shadow-lg p-7"
+                    className="interview-detail-card rounded-[28px] border-0 shadow-lg p-7"
                   >
 
-                    <div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-2xl interview-detail-blue-bg flex items-center justify-center">
 
                       <Brain
                         size={28}
@@ -764,7 +762,7 @@ export default function InterviewDetail() {
 
               {/* ================= RECOMMENDATION ================= */}
 
-              <Card className="rounded-[30px] border-0 shadow-lg p-8">
+              <Card className="interview-detail-card rounded-[30px] border-0 shadow-lg p-8">
 
                 <h2 className="font-display text-2xl">
 
@@ -803,7 +801,7 @@ export default function InterviewDetail() {
 
               {/* ================= SUMMARY ================= */}
 
-              <Card className="rounded-[30px] border-0 shadow-lg p-8">
+              <Card className="interview-detail-card rounded-[30px] border-0 shadow-lg p-8">
 
                 <h2 className="font-display text-2xl">
 
@@ -824,7 +822,7 @@ export default function InterviewDetail() {
 
               <div className="grid lg:grid-cols-2 gap-6">
 
-                <Card className="rounded-[30px] border-0 shadow-lg p-8">
+                <Card className="interview-detail-card rounded-[30px] border-0 shadow-lg p-8">
 
                   <h2 className="font-display text-2xl text-green-600">
 
@@ -841,7 +839,7 @@ export default function InterviewDetail() {
 
                 </Card>
 
-                <Card className="rounded-[30px] border-0 shadow-lg p-8">
+                <Card className="interview-detail-card rounded-[30px] border-0 shadow-lg p-8">
 
                   <h2 className="font-display text-2xl text-red-600">
 
@@ -876,13 +874,13 @@ export default function InterviewDetail() {
 
 {answers.length === 0 ? (
 
-<Card className="rounded-[30px] border-0 shadow-lg p-10">
+<Card className="interview-detail-card rounded-[30px] border-0 shadow-lg p-10">
 
 <div className="flex flex-col items-center">
 
 <FileText
 size={60}
-className="text-[#0E4B8E]"
+className="interview-detail-primary"
 />
 
 <h2 className="font-display text-3xl mt-6">
@@ -907,7 +905,7 @@ answers.map((answer, index) => (
 
 <Card
 key={answer.id ?? index}
-className="rounded-[30px] border-0 shadow-lg p-8"
+className="interview-detail-card rounded-[30px] border-0 shadow-lg p-8"
 >
 
 {/* Header */}
@@ -924,9 +922,9 @@ Question {index + 1}
 
 </div>
 
-<div className="rounded-xl bg-[#EEF4FF] px-4 py-2">
+<div className="rounded-xl interview-detail-blue-bg px-4 py-2">
 
-<span className="font-semibold text-[#0E4B8E]">
+<span className="font-semibold interview-detail-primary">
 
 Score : {answer.ai_score ?? "--"} / 10
 
@@ -964,7 +962,7 @@ Candidate Answer
 
 </p>
 
-<div className="mt-3 rounded-2xl bg-[#F8FAFD] border border-slate-200 p-6">
+<div className="mt-3 rounded-2xl interview-detail-surface interview-detail-border p-6">
 
 <p className="leading-8 text-gray-700 whitespace-pre-line">
 
@@ -1010,7 +1008,7 @@ Difficulty
 
 </p>
 
-<p className="mt-2 text-[#0E4B8E] font-semibold">
+<p className="mt-2 interview-detail-primary font-semibold">
 
 {answer.difficulty ?? "--"}
 
@@ -1039,7 +1037,7 @@ Difficulty
 
           {violations.length === 0 && (
 
-            <Card className="rounded-[30px] border-0 shadow-lg p-10">
+            <Card className="interview-detail-card rounded-[30px] border-0 shadow-lg p-10">
 
               <div className="flex flex-col items-center">
 
@@ -1071,7 +1069,7 @@ Difficulty
 
             <Card
               key={violation.id ?? index}
-              className="rounded-[30px] border-0 shadow-lg p-8"
+              className="interview-detail-card rounded-[30px] border-0 shadow-lg p-8"
             >
 
               <div className="flex justify-between items-center">
@@ -1167,9 +1165,9 @@ Difficulty
 
               {/* Recruiter Recommendation */}
 
-              <div className="mt-8 rounded-2xl bg-[#EEF4FF] border border-[#D7E3FF] p-6">
+              <div className="mt-8 rounded-2xl interview-detail-blue-bg interview-detail-border p-6">
 
-                <h3 className="font-semibold text-[#0E4B8E]">
+                <h3 className="font-semibold interview-detail-primary">
 
                   Recruiter Recommendation
 
@@ -1192,7 +1190,7 @@ Difficulty
       )}
             {/* ================= RECRUITER ACTIONS ================= */}
 
-      <Card className="rounded-[30px] border-0 shadow-lg p-8">
+      <Card className="interview-detail-card rounded-[30px] border-0 shadow-lg p-8">
 
         <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
 
@@ -1227,7 +1225,7 @@ ${
 
 report
 
-? "bg-[#0E4B8E] hover:bg-[#0A3B73] text-white"
+? "interview-detail-button text-white"
 
 : "bg-gray-300 text-gray-500 cursor-not-allowed"
 
@@ -1279,7 +1277,7 @@ toast.error(
 
               }
 
-              className="flex items-center gap-2 rounded-2xl border border-slate-300 hover:bg-slate-100 transition px-6 py-3 font-semibold"
+              className="interview-detail-outline-button flex items-center gap-2 rounded-2xl px-6 py-3 font-semibold transition"
 
             >
 

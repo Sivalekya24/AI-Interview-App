@@ -50,21 +50,21 @@ export default function Workflow() {
   return (
     <section
       id="workflow"
-      className="py-24 bg-white"
+      className="workflow-section py-24 bg-white"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
 
         <div className="text-center">
 
-          <span className="text-[#F4A321] font-semibold uppercase tracking-[0.25em]">
+          <span className="text-[#C97A00] font-semibold uppercase tracking-[0.25em]">
             HOW IT WORKS
           </span>
 
-          <h2 className="font-display text-5xl text-gray-900 mt-4">
+          <h2 className="workflow-heading font-display text-3xl md:text-4xl lg:text-5xl text-gray-900 mt-4">
             A Simple Recruitment Workflow
           </h2>
 
-          <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto leading-8">
+          <p className="workflow-text mt-6 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-7 sm:leading-8">
             Our AI platform streamlines every stage of the hiring process,
             enabling recruiters to evaluate candidates efficiently while
             ensuring interview integrity through live proctoring.
@@ -72,11 +72,11 @@ export default function Workflow() {
 
         </div>
 
-        <div className="relative mt-20">
+        <div className="relative mt-14 md:mt-20">
 
           {/* Vertical Line */}
 
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 -translate-x-1/2"></div>
+          <div className="workflow-line hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 -translate-x-1/2"></div>
 
           <div className="space-y-12">
 
@@ -90,7 +90,7 @@ export default function Workflow() {
 
                 <div
                   key={step.title}
-                  className={`grid lg:grid-cols-2 gap-12 items-center ${
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
                     reverse ? "lg:[&>*:first-child]:order-2" : ""
                   }`}
                 >
@@ -98,7 +98,7 @@ export default function Workflow() {
                   {/* Card */}
 
                   <div
-                    className={`${
+                    className={`workflow-card${
                       reverse
                         ? "lg:text-left"
                         : "lg:text-right"
@@ -114,11 +114,11 @@ export default function Workflow() {
 
                     </div>
 
-                    <h3 className="font-display text-3xl mt-6 text-gray-900">
+                    <h3 className="workflow-heading font-display text-2xl md:text-3xl mt-6 text-gray-900">
                       {step.title}
                     </h3>
 
-                    <p className="mt-4 text-gray-600 leading-8">
+                    <p className="workflow-text mt-4 text-gray-600 leading-7 sm:leading-8">
                       {step.description}
                     </p>
 
@@ -128,7 +128,7 @@ export default function Workflow() {
 
                   <div className="hidden lg:flex justify-center">
 
-                    <div className="w-8 h-8 rounded-full bg-[#0E4B8E] border-4 border-white shadow-lg"></div>
+                    <div className="workflow-circle w-8 h-8 rounded-full bg-[#0E4B8E] border-4 border-white shadow-lg"></div>
 
                   </div>
 

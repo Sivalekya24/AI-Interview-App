@@ -32,7 +32,7 @@ const handleSubmit = async (e) => {
 
     await submitContactMessage(formData);
 
-    alert("Message sent successfully!");
+    alert("Thank you! Your message has been sent successfully.");
 
     setFormData({
       name: "",
@@ -50,28 +50,28 @@ const handleSubmit = async (e) => {
   return (
     <section
       id="contact"
-      className="py-24 bg-white"
+      className="contact-section py-24 bg-white"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
 
         <div className="text-center mb-16">
 
-          <span className="text-[#F4A321] font-semibold uppercase tracking-[0.25em]">
+          <span className="text-[#C97A00] font-semibold uppercase tracking-[0.25em]">
             CONTACT
           </span>
 
-          <h2 className="font-display text-5xl mt-4 text-gray-900">
+          <h2 className="contact-heading font-display text-3xl md:text-4xl lg:text-5xl mt-4 text-gray-900">
             Let's Build Better Hiring Together
           </h2>
 
-          <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="contact-text mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
             Have questions about our AI Interview Platform?
             We'd love to hear from you.
           </p>
 
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
           {/* Left */}
 
@@ -85,11 +85,11 @@ const handleSubmit = async (e) => {
 
               <div>
 
-                <h3 className="font-semibold text-xl">
+                <h3 className="contact-heading font-semibold text-xl">
                   Email
                 </h3>
 
-                <p className="text-gray-600">
+                <p className="contact-text text-gray-600">
                   admin@shnoor.com
                 </p>
 
@@ -105,11 +105,11 @@ const handleSubmit = async (e) => {
 
               <div>
 
-                <h3 className="font-semibold text-xl">
+                <h3 className="contact-heading font-semibold text-xl">
                   Phone
                 </h3>
 
-                <p className="text-gray-600">
+                <p className="contact-text text-gray-600">
                   +91- 9041914601(IN)
                 </p>
 
@@ -125,11 +125,11 @@ const handleSubmit = async (e) => {
 
               <div>
 
-                <h3 className="font-semibold text-xl">
+                <h3 className="contact-heading font-semibold text-xl">
                   Office
                 </h3>
 
-                <p className="text-gray-600">
+                <p className="contact-text text-gray-600">
                   SHNOOR International LLC
                 </p>
 
@@ -145,11 +145,11 @@ const handleSubmit = async (e) => {
 
               <div>
 
-                <h3 className="font-semibold text-xl">
+                <h3 className="contact-heading font-semibold text-xl">
                   Working Hours
                 </h3>
 
-                <p className="text-gray-600">
+                <p className="contact-text text-gray-600">
                   Monday - Friday
                   <br />
                   10:00 AM - 7:00 PM
@@ -163,50 +163,54 @@ const handleSubmit = async (e) => {
 
           {/* Right */}
 
-          <div className="bg-[#F8FAFC] rounded-3xl border border-gray-200 p-10">
+          <div className="contact-form-card  bg-[#F8FAFC] rounded-3xl border border-gray-200 p-6 md:p-8 lg:p-10">
 
-            <h3 className="font-display text-3xl text-gray-900 mb-8">
+            <h3 className="contact-heading font-display text-3xl text-gray-900 mb-8">
               Send us a Message
             </h3>
 
             <form
              onSubmit={handleSubmit}
              className="space-y-6">
+            
 
               <input
+                disabled={loading}
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 outline-none focus:border-[#0E4B8E]"
+                className="contact-input w-full border border-gray-300 rounded-xl px-5 py-4 outline-none focus:border-[#0E4B8E]"
                 required
               />
-
+           
               <input
+                disabled={loading}
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email Address"
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 outline-none focus:border-[#0E4B8E]"
+                className="contact-input w-full border border-gray-300 rounded-xl px-5 py-4 outline-none focus:border-[#0E4B8E]"
                 required
               />
-
+              
               <textarea
+                disabled={loading}
                 rows="5"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your Message"
-                className="w-full border border-gray-300 rounded-xl px-5 py-4 outline-none resize-none focus:border-[#0E4B8E]"
+                className="contact-input w-full border border-gray-300 rounded-xl px-5 py-4 outline-none resize-none focus:border-[#0E4B8E]"
                 required
               ></textarea>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#0E4B8E] hover:bg-[#08386d] text-white px-8 py-4 rounded-xl flex items-center gap-3 font-semibold transition"
+                className="w-full sm:w-auto bg-[#0E4B8E] hover:bg-[#08386d] text-white px-8 py-4 rounded-xl flex justify-center items-center gap-3 font-semibold transition-colors duration-300"
               >
 
                 <Send size={18} />

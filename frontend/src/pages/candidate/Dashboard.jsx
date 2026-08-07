@@ -74,12 +74,11 @@ export default function CandidateDashboard() {
 
   return (
 
-<div className="space-y-8">
+<div className="candidate-dashboard space-y-8">
 
 {/* ================= HERO ================= */}
 
-<div className="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-[#0E4B8E] via-[#1659A5] to-[#2C6CC2] px-10 py-10 text-white shadow-xl">
-
+<div className="candidate-hero relative overflow-hidden rounded-[32px] px-10 py-10 shadow-xl">
 <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
 
 <div className="absolute -left-20 -bottom-20 h-72 w-72 rounded-full bg-[#F4A321]/20 blur-3xl"></div>
@@ -96,7 +95,7 @@ Candidate Dashboard
 
 <h1 className="font-display text-5xl mt-5">
 
-Welcome Back
+Welcome to SHNOOR AI Interview Platform
 
 </h1>
 
@@ -150,8 +149,7 @@ All AI services are operational.
 
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
 
-<Card className="rounded-3xl border-0 shadow-md p-6">
-
+<Card className="candidate-card rounded-3xl border-0 shadow-md p-6">
 <p className="text-gray-500 text-sm">
 
 Resume
@@ -172,7 +170,7 @@ Resume
 
 </Card>
 
-<Card className="rounded-3xl border-0 shadow-md p-6">
+<Card className="candidate-card rounded-3xl border-0 shadow-md p-6">
 
 <p className="text-gray-500 text-sm">
 
@@ -194,7 +192,7 @@ Questions
 
 </Card>
 
-<Card className="rounded-3xl border-0 shadow-md p-6">
+<Card className="candidate-card rounded-3xl border-0 shadow-md p-6">
 
 <p className="text-gray-500 text-sm">
 
@@ -216,7 +214,7 @@ Voice Based
 
 </Card>
 
-<Card className="rounded-3xl border-0 shadow-md p-6">
+<Card className="candidate-card rounded-3xl border-0 shadow-md p-6">
 
 <p className="text-gray-500 text-sm">
 
@@ -245,7 +243,7 @@ Minutes
 
 {/* Resume Status */}
 
-<Card className="rounded-[28px] border-0 shadow-md hover:shadow-xl transition-all duration-300 p-8">
+<Card className="candidate-card rounded-[28px] border-0 shadow-md hover:shadow-xl transition-all duration-300 p-8">
 
 <div className="flex items-start justify-between">
 
@@ -362,7 +360,7 @@ size={16}
 
 {/* Interview Status */}
 
-<Card className="rounded-[28px] border-0 shadow-md hover:shadow-xl transition-all duration-300 p-8">
+<Card className="candidate-card rounded-[28px] border-0 shadow-md hover:shadow-xl transition-all duration-300 p-8">
 
 <div className="flex items-start justify-between">
 
@@ -534,7 +532,7 @@ size={16}
 
 {/* Interview Process */}
 
-<Card className="rounded-[28px] border-0 shadow-md hover:shadow-xl transition-all duration-300 p-8">
+<Card className="candidate-card rounded-[28px] border-0 shadow-md hover:shadow-xl transition-all duration-300 p-8">
 
 <div className="flex items-center gap-3">
 
@@ -701,7 +699,7 @@ Recruiters receive your AI-generated interview report.
 
 {/* System Status */}
 
-<Card className="rounded-[28px] border-0 shadow-md hover:shadow-xl transition-all duration-300 p-8">
+<Card className="candidate-card rounded-[28px] border-0 shadow-md hover:shadow-xl transition-all duration-300 p-8">
 
 <div className="flex items-center gap-3">
 
@@ -805,7 +803,7 @@ Choose a quiet environment with a stable internet connection. Keep your camera a
 </div>
 {/* ================= FOOTER ================= */}
 
-<div className="rounded-[28px] bg-white shadow-md border border-gray-100 px-8 py-6 flex flex-col lg:flex-row items-center justify-between">
+<div className="candidate-footer rounded-[28px] shadow-md border  px-8 py-6 flex flex-col lg:flex-row items-center justify-between">
 
 <div>
 

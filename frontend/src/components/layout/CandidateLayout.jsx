@@ -9,11 +9,11 @@ export default function CandidateLayout() {
 
   return (
 
-    <div className="min-h-screen bg-[#EEF3FA]">
+    <div className="candidate-layout min-h-screen">
 
       {/* ================= HEADER ================= */}
 
-      <header className="fixed top-0 inset-x-0 z-20 bg-white shadow-sm border-b border-slate-200">
+      <header className="candidate-header fixed top-0 inset-x-0 z-20 bg-white shadow-sm border-b border-slate-200">
 
         <div className="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
 
@@ -35,7 +35,7 @@ export default function CandidateLayout() {
 
               </p>
 
-              <p className="text-sm text-gray-500 mt-1">
+              <p className="candidate-text text-sm  mt-1">
 
               Secure AI Recruitment Platform
 
@@ -51,7 +51,7 @@ export default function CandidateLayout() {
 
             <div className="text-right">
 
-              <p className="text-lg font-semibold text-[#111827]">
+              <p className="candidate-heading text-lg font-semibold ">
 
                 {user?.name ?? "Candidate"}
 
@@ -61,7 +61,7 @@ export default function CandidateLayout() {
 
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
 
-                <span className="text-sm text-gray-500">
+                <span className="text-sm candidate-text">
 
                   {user?.role ?? "Candidate"}
 
@@ -75,7 +75,7 @@ export default function CandidateLayout() {
 
               onClick={logout}
 
-              className="flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-[#0E4B8E] font-medium transition-all duration-200 hover:border-[#0E4B8E] hover:bg-[#EEF4FF] hover:shadow-sm"
+              className="candidate-button flex items-center gap-2 rounded-xl px-5 py-2.5 font-medium transition-all duration-200 hover:shadow-sm"
 
             >
 

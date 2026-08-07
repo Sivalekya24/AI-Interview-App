@@ -30,15 +30,26 @@ function ScoreDistributionChart({ interviews }) {
       type: 'bar',
       data: {
         labels: Object.keys(buckets),
-        datasets: [{ data: Object.values(buckets), backgroundColor: '#3ddbd9', borderRadius: 4, maxBarThickness: 40 }],
+        datasets: [{ data: Object.values(buckets), backgroundColor:getComputedStyle(document.documentElement).getPropertyValue('--color-primary'), borderRadius: 4, maxBarThickness: 40 }],
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         plugins: { legend: { display: false } },
         scales: {
-          x: { grid: { display: false }, ticks: { color: '#7c8699', font: { size: 11 } } },
-          y: { grid: { color: '#232935' }, ticks: { color: '#7c8699', font: { size: 11 } } },
+          x: { grid: { display: false }, ticks:{
+    color:getComputedStyle(document.documentElement)
+    .getPropertyValue('--color-text-secondary'),
+    font:{size:11}
+} },
+          y: { grid:{
+    color:getComputedStyle(document.documentElement)
+    .getPropertyValue('--color-border')
+}, ticks:{
+    color:getComputedStyle(document.documentElement)
+    .getPropertyValue('--color-text-secondary'),
+    font:{size:11}
+} },
         },
       },
     })
@@ -71,7 +82,9 @@ function ViolationBreakdownChart({ violations }) {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { position: 'bottom', labels: { color: '#7c8699', font: { size: 11 }, padding: 12 } },
+          legend: { position: 'bottom', labels:{
+    color:getComputedStyle(document.documentElement)
+    .getPropertyValue('--color-text-secondary'), font: { size: 11 }, padding: 12 } },
         },
       },
     })
@@ -96,35 +109,35 @@ export default function Reports() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="font-display text-2xl font-semibold text-ink">Reports</h1>
-        <p className="text-muted text-sm mt-1">Aggregate performance and proctoring trends</p>
+      <div className="reports-page space-y-8">
+        <h1 className="reports-heading font-display text-2xl font-semibold text-ink">Reports</h1>
+        <p className="reports-secondary text-sm mt-1">Aggregate performance and proctoring trends</p>
       </div>
 
       <div className="grid grid-cols-3 gap-4">
-        <Card className="p-5">
-          <p className="font-display text-2xl font-semibold text-signal">{avgScore}</p>
-          <p className="text-xs text-muted mt-1">Average score</p>
+        <Card className="reports-card p-5">
+          <p className="font-display text-2xl font-semibold reports-primary">{avgScore}</p>
+          <p className="text-xs reports-secondary mt-1">Average score</p>
         </Card>
-        <Card className="p-5">
-          <p className="font-display text-2xl font-semibold text-ink">{interviews.length}</p>
-          <p className="text-xs text-muted mt-1">Interviews analyzed</p>
+        <Card className="reports-card p-5">
+          <p className="font-display text-2xl font-semibold reports-heading">{interviews.length}</p>
+          <p className="text-xs reports-secondary mt-1">Interviews analyzed</p>
         </Card>
-        <Card className="p-5">
-          <p className="font-display text-2xl font-semibold text-alert">{violations.length}</p>
-          <p className="text-xs text-muted mt-1">Total violations</p>
+        <Card className="reports-card p-5">
+          <p className="font-display text-2xl font-semibold reports-alert">{violations.length}</p>
+          <p className="text-xs reports-secondary mt-1">Total violations</p>
         </Card>
       </div>
 
       <div className="grid grid-cols-2 gap-4">
-        <Card className="p-5">
-          <p className="text-xs font-mono text-muted uppercase tracking-wide mb-4">Score distribution</p>
+        <Card className="reports-card p-5">
+          <p className="text-xs font-mono reports-secondary uppercase tracking-wide mb-4">Score distribution</p>
           <div className="h-56">
             <ScoreDistributionChart interviews={interviews} />
           </div>
         </Card>
-        <Card className="p-5">
-          <p className="text-xs font-mono text-muted uppercase tracking-wide mb-4">Violation breakdown</p>
+        <Card className="reports-card p-5">
+          <p className="text-xs font-mono reports-secondary uppercase tracking-wide mb-4">Violation breakdown</p>
           <div className="h-56">
             <ViolationBreakdownChart violations={violations} />
           </div>

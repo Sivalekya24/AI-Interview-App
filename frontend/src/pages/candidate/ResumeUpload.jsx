@@ -96,11 +96,10 @@ export default function ResumeUpload() {
 
   return (
 
-<div className="space-y-8">
-
+<div className="resume-upload-page space-y-8">
 {/* ================= HERO ================= */}
 
-<div className="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-[#0E4B8E] via-[#1659A5] to-[#2C6CC2] px-10 py-10 text-white shadow-xl">
+<div className="resume-upload-hero relative overflow-hidden rounded-[32px] px-10 py-10 text-white shadow-xl">
 
 <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-3xl"></div>
 
@@ -164,10 +163,10 @@ DOC & DOCX
 {/* ================= UPLOAD AREA ================= */}
 
 <Card
-className={`rounded-[30px] border-2 border-dashed transition-all duration-300 p-16 cursor-pointer hover:shadow-xl ${
+className={`resume-upload-card rounded-[30px] border-2 border-dashed transition-all duration-300 p-16 cursor-pointer hover:shadow-xl ${
 isDragging
-? "border-[#0E4B8E] bg-[#EEF4FF]"
-: "border-slate-300"
+? "resume-upload-active"
+: ""
 }`}
 onClick={() => inputRef.current?.click()}
 onDragOver={(e) => {
@@ -209,7 +208,7 @@ handleFile(e.target.files[0])
 
 <div className="flex flex-col items-center text-center">
 
-<div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center">
+<div className="resume-upload-icon-bg w-24 h-24 rounded-full flex items-center justify-center">
 
 <CheckCircle2
 
@@ -221,7 +220,7 @@ className="text-green-600"
 
 </div>
 
-<h2 className="font-display text-3xl text-[#111827] mt-8">
+<h2 className="resume-upload-heading font-display text-3xl mt-8">
 
 Resume Selected
 
@@ -297,19 +296,19 @@ or click anywhere to browse your computer
 
 <div className="flex flex-wrap justify-center gap-3 mt-8">
 
-<span className="px-4 py-2 rounded-full bg-[#EEF4FF] text-[#0E4B8E] font-medium">
+<span className="resume-upload-chip px-4 py-2 rounded-full font-medium">
 
 PDF
 
 </span>
 
-<span className="px-4 py-2 rounded-full bg-[#EEF4FF] text-[#0E4B8E] font-medium">
+<span className="resume-upload-chip px-4 py-2 rounded-full bg-[#EEF4FF] text-[#0E4B8E] font-medium">
 
 DOC
 
 </span>
 
-<span className="px-4 py-2 rounded-full bg-[#EEF4FF] text-[#0E4B8E] font-medium">
+<span className="resume-upload-chip px-4 py-2 rounded-full bg-[#EEF4FF] text-[#0E4B8E] font-medium">
 
 DOCX
 
@@ -334,7 +333,7 @@ Maximum File Size: 10 MB
 
 <div className="flex items-center gap-4">
 
-<div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+<div className="w-14 h-14 rounded-2xl resume-upload-icon-bg flex items-center justify-center">
 
 <ShieldCheck
 size={28}
@@ -473,7 +472,7 @@ personalized interview questions.
 
 <Button
 
-className="w-full h-14 text-lg bg-[#0E4B8E] hover:bg-[#0B417C] rounded-2xl"
+className="resume-upload-button w-full h-14 text-lg rounded-2xl"
 
 disabled={!file || isSubmitting}
 
@@ -491,9 +490,9 @@ onClick={handleSubmit}
 
 {/* ================= SECURITY NOTE ================= */}
 
-<div className="rounded-2xl bg-[#EEF4FF] border border-[#D7E3FF] p-6 text-center">
+<div className="resume-security-box rounded-2xl p-6 text-center">
 
-<p className="font-semibold text-[#0E4B8E]">
+<p className="font-semibold resume-upload-heading">
 
 Secure Resume Processing
 

@@ -50,12 +50,11 @@ export default function InterviewInstructions() {
 
 <PageTransition>
 
-<div className="max-w-6xl mx-auto space-y-8 pt-6 px-4">
+<div className="interview-instructions-page max-w-6xl mx-auto space-y-8 pt-6 px-4">
 
 {/* ================= HERO ================= */}
 
-<div className="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-[#0E4B8E] via-[#1659A5] to-[#2C6CC2] px-10 py-10 text-white shadow-xl">
-
+<div className="interview-hero relative overflow-hidden rounded-[32px] px-10 py-10 text-white shadow-xl">
 <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
 
 <div className="absolute -left-20 -bottom-20 h-72 w-72 rounded-full bg-[#F4A321]/20 blur-3xl"></div>
@@ -133,7 +132,7 @@ Questions
 
 </h2>
 
-<p className="text-[#0E4B8E] mt-2 font-medium">
+<p className="interview-primary-text mt-2 font-medium">
 
 AI Generated
 
@@ -155,7 +154,7 @@ Duration
 
 </h2>
 
-<p className="text-[#0E4B8E] mt-2 font-medium">
+<p className="interview-primary-text mt-2 font-medium">
 
 Minutes
 
@@ -170,11 +169,11 @@ Minutes
 
 <div className="flex items-center gap-4">
 
-<div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+<div className="w-14 h-14 rounded-2xl interview-icon-bg flex items-center justify-center">
 
 <Brain
 size={28}
-className="text-[#0E4B8E]"
+className="interview-primary-text"
 />
 
 </div>
@@ -223,18 +222,18 @@ className="flex gap-5"
 
 >
 
-<div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center flex-shrink-0">
+<div className="w-14 h-14 rounded-2xl interview-icon-bg flex items-center justify-center flex-shrink-0">
 
 <Icon
 size={24}
-className="text-[#0E4B8E]"
+className="interview-primary-text"
 />
 
 </div>
 
 <div>
 
-<h3 className="text-lg font-semibold text-[#111827]">
+<h3 className="text-lg font-semibold interview-heading">
 
 {title}
 
@@ -262,11 +261,11 @@ className="text-[#0E4B8E]"
 
 <div className="flex items-center gap-4">
 
-<div className="w-14 h-14 rounded-2xl bg-[#EEF4FF] flex items-center justify-center">
+<div className="w-14 h-14 rounded-2xl interview-icon-bg flex items-center justify-center">
 
 <ShieldCheck
 size={28}
-className="text-[#0E4B8E]"
+className="interview-primary-text"
 />
 
 </div>
@@ -378,8 +377,8 @@ onClick={() => setAgreed(!agreed)}
 
 className={`w-full flex items-start gap-5 rounded-2xl border p-6 transition-all duration-300 ${
 agreed
-? "border-[#0E4B8E] bg-[#EEF4FF]"
-: "border-slate-200 hover:border-[#0E4B8E]"
+? "interview-consent-active"
+: "border-slate-200 hover:border-[var(--color-primary)]"
 }`}
 
 >
@@ -390,7 +389,7 @@ agreed
 
 size={28}
 
-className="text-[#0E4B8E] flex-shrink-0 mt-1"
+className="interview-primary-text flex-shrink-0 mt-1"
 
 />
 
@@ -408,7 +407,7 @@ className="text-gray-400 flex-shrink-0 mt-1"
 
 <div className="text-left">
 
-<h3 className="text-lg font-semibold text-[#111827]">
+<h3 className="text-lg font-semibold interview-heading">
 
 Consent for AI Proctoring
 
@@ -432,7 +431,7 @@ for assessment and security purposes.
 
 <Button
 
-className="w-full h-14 rounded-2xl bg-[#0E4B8E] hover:bg-[#0B417C] text-lg"
+className="interview-button w-full h-14 rounded-2xl text-lg"
 
 disabled={!agreed}
 
@@ -448,17 +447,17 @@ Enter Interview Room
 
 {/* ================= SECURITY ================= */}
 
-<div className="rounded-[28px] bg-[#EEF4FF] border border-[#D7E3FF] p-6">
+<div className="rounded-[28px] interview-security-bg border p-6">
 
 <div className="flex items-start gap-4">
 
-<div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center">
+<div className="w-12 h-12 rounded-xl interview-card-white flex items-center justify-center">
 
 <ShieldCheck
 
 size={24}
 
-className="text-[#0E4B8E]"
+className="interview-primary-text"
 
 />
 

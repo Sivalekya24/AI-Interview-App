@@ -71,9 +71,9 @@ export default function ResetPassword() {
 
   return (
 
-    <div className="min-h-screen bg-[#EEF3FA] flex items-center justify-center">
+    <div className="auth-page min-h-screen bg-[#EEF3FA] flex items-center justify-center">
 
-      <div className="bg-white shadow-xl rounded-3xl p-10 w-full max-w-md">
+      <div className="auth-card  shadow-xl rounded-3xl p-10 w-full max-w-md">
 
         <div className="flex justify-center mb-6">
 
@@ -81,13 +81,13 @@ export default function ResetPassword() {
 
         </div>
 
-        <h2 className="text-3xl font-bold text-center">
+        <h2 className="auth-heading text-3xl font-bold text-center">
 
           Reset Password
 
         </h2>
 
-        <p className="text-center text-gray-500 mt-2">
+        <p className="auth-text text-center mt-2">
 
           Enter your new password.
 

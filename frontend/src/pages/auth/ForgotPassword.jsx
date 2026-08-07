@@ -52,9 +52,9 @@ export default function ForgotPassword() {
 
   return (
 
-    <div className="min-h-screen bg-[#EEF3FA] flex items-center justify-center px-6">
+    <div className="auth-page min-h-screen bg-[#EEF3FA] flex items-center justify-center px-6">
 
-      <div className="bg-white rounded-3xl shadow-xl w-full max-w-md p-10">
+      <div className="auth-card rounded-3xl shadow-xl w-full max-w-md p-10">
 
         <div className="flex justify-center mb-6">
 
@@ -62,13 +62,13 @@ export default function ForgotPassword() {
 
         </div>
 
-        <h1 className="text-3xl font-bold text-center">
+        <h1 className="auth-heading text-3xl font-bold text-center">
 
           Forgot Password
 
         </h1>
 
-        <p className="text-gray-500 text-center mt-2">
+        <p className="auth-text text-center mt-2">
 
           Enter your registered email address.
           We'll send you a password reset link.
@@ -113,7 +113,7 @@ export default function ForgotPassword() {
 
           <Link
             to="/login"
-            className="text-[#0E4B8E] hover:underline"
+            className="font-medium text-[#0E4B8E] hover:text-[#F4A321]"
           >
 
             Back to Login

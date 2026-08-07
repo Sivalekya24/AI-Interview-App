@@ -186,19 +186,18 @@ export default function UserManagement() {
 
   return (
 
-    <div className="space-y-6">
+   <div className="user-management-page space-y-6">
 
       <div className="flex items-center justify-between">
 
         <div>
 
-          <h1 className="font-display text-2xl font-semibold text-ink">
-
+          <h1 className="user-management-heading font-display text-2xl font-semibold">
             Users
 
           </h1>
 
-          <p className="text-muted text-sm mt-1">
+          <p className="user-management-text text-sm mt-1">
 
             {users.length} registered
 
@@ -243,9 +242,7 @@ export default function UserManagement() {
       </div>
 
       {showCreate && (
-
-        <Card className="p-5">
-
+<Card className="user-management-card p-5">
           <form
 
             onSubmit={handleCreate}
@@ -336,33 +333,33 @@ export default function UserManagement() {
 
       )}
 
-      <Card className="overflow-hidden">
+      <Card className="user-management-card overflow-hidden">
 
         <table className="w-full text-sm">
 
           <thead>
 
-            <tr className="border-b border-line text-left">
+            <tr className="user-management-border text-left">
 
-              <th className="px-5 py-3 text-xs font-mono text-muted uppercase tracking-wide">
+              <th className="px-5 py-3 text-xs font-mono user-management-text uppercase tracking-wide">
 
                 Name
 
               </th>
 
-              <th className="px-5 py-3 text-xs font-mono text-muted uppercase tracking-wide">
+              <th className="px-5 py-3 text-xs font-mono user-management-text uppercase tracking-wide">
 
                 Email
 
               </th>
 
-              <th className="px-5 py-3 text-xs font-mono text-muted uppercase tracking-wide">
+              <th className="px-5 py-3 text-xs font-mono user-management-text uppercase tracking-wide">
 
                 Role
 
               </th>
 
-              <th className="px-5 py-3 text-xs font-mono text-muted uppercase tracking-wide">
+              <th className="px-5 py-3 text-xs font-mono user-management-text uppercase tracking-wide">
 
                 Status
 
@@ -384,8 +381,7 @@ export default function UserManagement() {
 
                   colSpan={5}
 
-                  className="px-5 py-8 text-center text-muted"
-
+                  className="px-5 py-8 text-center user-management-text"
                 >
 
                   Loading...
@@ -406,7 +402,7 @@ export default function UserManagement() {
 
                     colSpan={5}
 
-                    className="px-5 py-8 text-center text-muted"
+                    className="px-5 py-8 text-center user-management-text"
 
                   >
 
@@ -428,19 +424,19 @@ export default function UserManagement() {
 
               >
 
-                <td className="px-5 py-3 text-ink">
+                <td className="px-5 py-3 user-management-heading font-medium text-sm">
 
                   {u.full_name ?? u.name}
 
                 </td>
 
-                <td className="px-5 py-3 text-muted font-mono text-xs">
+                <td className="px-5 py-3 user-management-text font-mono text-xs">
 
                   {u.email}
 
                 </td>
 
-                <td className="px-5 py-3 text-muted">
+                <td className="px-5 py-3 user-management-text">
 
                   {u.role}
 
@@ -448,7 +444,7 @@ export default function UserManagement() {
 
                 <td className="px-5 py-3">
 
-                  <span className="flex items-center gap-1.5 text-xs font-mono text-muted">
+                  <span className="flex items-center gap-1.5 text-xs font-mono user-management-text">
 
                     <StatusDot
 
@@ -484,7 +480,7 @@ export default function UserManagement() {
 
                     }
 
-                    className="text-muted hover:text-ink transition-colors"
+                    className="user-management-power transition-colors"
 
                   >
 
